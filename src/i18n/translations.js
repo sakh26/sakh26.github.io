@@ -147,7 +147,7 @@ export const translations = {
     contact: {
       eyebrow: 'Ta kontakt',
       title: 'Kontakt meg',
-      desc: 'Åpen for deltidsstillinger, praksisplasser og spennende prosjekter.',
+      desc: 'På utkikk etter en fulltidsstilling. Ta gjerne kontakt.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
@@ -304,7 +304,7 @@ export const translations = {
     contact: {
       eyebrow: 'Get in touch',
       title: 'Contact me',
-      desc: 'Open to part-time positions, internships and exciting projects.',
+      desc: 'Looking for a full-time position. Feel free to reach out.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
