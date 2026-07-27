@@ -21,6 +21,15 @@ export default function Contact() {
               github.com/sakh26
             </a>
           </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sara-khudadad-750381362"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+          </li>
         </ul>
       </div>
     </section>
