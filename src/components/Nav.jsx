@@ -44,7 +44,7 @@ export default function Nav() {
           <span className="lang-sep">/</span>
           <span className={lang === 'en' ? 'lang-active' : ''}>EN</span>
         </button>
-        <a href="/cv.pdf" className="nav-cv" download>
+        <a href="/cv.pdf" className="nav-cv" download="CV - Sara Khudadad.pdf">
           {t.nav.cv}
         </a>
       </div>
