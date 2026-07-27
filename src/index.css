@@ -1,0 +1,91 @@
+:root {
+  --ink: #3b2c23;      /* Espresso */
+  --ink-60: #6f5f4d;   /* Muted Cocoa */
+  --ink-40: #aa8c6b;   /* Almond */
+  --border: #b7a38b;   /* Sand */
+  --surface: #ddd1c3;  /* Beige */
+  --bg: #f4ede1;       /* Ivory */
+
+  /* Contact panel — stays a dark statement in both themes */
+  --panel-bg: #3b2c23;
+  --panel-ink: #f4ede1;
+  --panel-muted: #ba9f83;
+  --panel-border: #6f5f4d;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius: 4px;
+  --max-w: 1080px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --ink: #efe6d6;
+  --ink-60: #c4b39b;
+  --ink-40: #93826a;
+  --border: #4a3d31;
+  --surface: #2a2119;
+  --bg: #1b1611;
+
+  color-scheme: dark;
+}
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}

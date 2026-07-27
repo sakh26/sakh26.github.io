@@ -1,0 +1,308 @@
+export const translations = {
+  no: {
+    nav: {
+      links: [
+        { href: '#om', label: 'Om meg' },
+        { href: '#prosjekter', label: 'Prosjekter' },
+        { href: '#ferdigheter', label: 'Ferdigheter' },
+        { href: '#utdannelse', label: 'Utdannelse' },
+        { href: '#erfaring', label: 'Erfaring' },
+        { href: '#kontakt', label: 'Kontakt' },
+      ],
+      cv: 'Last ned CV',
+    },
+    hero: {
+      eyebrow: 'Utvikler · Oslo',
+      title: ['Sara', 'Khudadad'],
+      credentials: [
+        { main: 'Bachelor i Anvendt Datateknologi', detail: 'OsloMet · retning programmering' },
+        { main: 'Autorisert sykepleier', detail: null },
+      ],
+      ctaProjects: 'Se prosjekter',
+      ctaGithub: 'GitHub',
+      photoCaption: 'Sara Khudadad — utvikler',
+    },
+    about: {
+      title: 'Om meg',
+      body: [
+        'Jeg studerer Anvendt Datateknologi ved OsloMet og jobber som studentassistent på IT-servicedesken, der jeg hjelper studenter og ansatte med alt fra feilsøking til utstyr.',
+        'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
+        'Nå bygger jeg egne prosjekter i Java og React, og trives best når jeg får lære noe nytt og se det fungere i praksis.',
+      ],
+    },
+    projects: {
+      title: 'Utvalgte prosjekter',
+      seeAll: 'Se alle på GitHub →',
+      liveLabel: 'Live demo',
+      items: [
+        {
+          index: '01',
+          tag: 'Hobby',
+          name: 'Jeoparty',
+          desc: 'Jeopardy-inspirert partyspill bygget i React, med tilpassbare kategorier og spørsmål for spill med venner og familie.',
+          tech: ['React', 'TypeScript', 'Vite'],
+          repo: 'Jeoparty',
+          live: null,
+        },
+        {
+          index: '02',
+          tag: 'Under utvikling',
+          name: 'Bryllupsnettside',
+          desc: 'Nettside laget for et bryllup — under utvikling.',
+          tech: ['React'],
+          repo: null,
+          live: null,
+        },
+      ],
+    },
+    skills: {
+      title: 'Ferdigheter',
+      groups: [
+        { label: 'Språk', items: ['Java', 'JavaScript / TypeScript', 'HTML / CSS', 'SQL'] },
+        { label: 'Rammeverk & verktøy', items: ['IntelliJ IDEA', 'VS Code', 'Git / GitHub', 'React'] },
+      ],
+    },
+    learning: {
+      title: 'Under læring',
+      items: [
+        'Bygger fullstack-prosjekter i React (Jeoparty, bryllupsnettside)',
+        'Anvendt Datateknologi — pågående studie ved OsloMet',
+      ],
+    },
+    education: {
+      title: 'Utdannelse',
+      groups: [
+        {
+          label: 'Utdannelse',
+          items: ['Anvendt Datateknologi — OsloMet (2024 – nå)', 'Sykepleier — VID Vitenskapelige Høgskole (2021 – 2024)'],
+        },
+        {
+          label: 'Språk',
+          items: ['Norsk — morsmål', 'Engelsk — flytende', 'Kurdisk — flytende'],
+        },
+      ],
+    },
+    experience: {
+      title: 'Erfaring',
+      showMore: 'Vis tidligere erfaring',
+      showLess: 'Vis mindre',
+      items: [
+        {
+          date: 'okt. 2025 – nå',
+          role: 'Studentassistent, IT-Servicedesk',
+          place: 'OsloMet',
+          current: true,
+          bullets: [
+            'Bistår studenter og ansatte med IT-relaterte spørsmål og problemer',
+            'Hendelseshåndtering og veiledning i IT-systemer og tjenester',
+            'Administratortilgang (admin-konto) i IT-systemene for oppsett og feilsøking',
+            'Oppsett, utlån og utlevering av PC og utstyr',
+          ],
+        },
+        {
+          date: 'juni 2025 – nå',
+          role: 'Medisinsk rådgiver',
+          place: 'Vertikal Helse / If Helseforsikring, Oslo',
+          current: true,
+          bullets: [
+            'Rådgivning og veiledning i helsetjenester og bruk av digitale løsninger',
+            'Håndterer henvendelser fra kunder og leverandører, med fokus på gode kundeopplevelser',
+            'Arbeider i tverrfaglige team',
+          ],
+        },
+        {
+          date: 'sep. 2024 – 2025',
+          role: 'Miljøarbeider',
+          place: 'Edvard Munch VGS, Oslo kommune',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2024',
+          role: 'Sykepleier, Hjemmetjenesten',
+          place: 'Kristiansand kommune',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2019 – 2024',
+          role: 'Pleieassistent',
+          place: 'Kristiansand kommune / Oslo kommune',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2015 – 2020',
+          role: 'Salg- og servicemedarbeider',
+          place: 'Peppes Pizza, Sørlandssenteret',
+          current: false,
+          bullets: [],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'Ta kontakt',
+      title: 'Kontakt meg',
+      desc: 'Åpen for deltidsstillinger, praksisplasser og spennende prosjekter.',
+      email: 'sarasabir26@outlook.com',
+      phone: '+47 901 93 636',
+    },
+    footer: {
+      copyright: '© 2026 Sara Khudadad',
+      hosted: 'Hostet på GitHub Pages',
+    },
+  },
+  en: {
+    nav: {
+      links: [
+        { href: '#om', label: 'About' },
+        { href: '#prosjekter', label: 'Projects' },
+        { href: '#ferdigheter', label: 'Skills' },
+        { href: '#utdannelse', label: 'Education' },
+        { href: '#erfaring', label: 'Experience' },
+        { href: '#kontakt', label: 'Contact' },
+      ],
+      cv: 'Download CV',
+    },
+    hero: {
+      eyebrow: 'Developer · Oslo',
+      title: ['Sara', 'Khudadad'],
+      credentials: [
+        { main: "Bachelor's in Applied Computer Technology", detail: 'OsloMet · programming track' },
+        { main: 'Licensed nurse', detail: null },
+      ],
+      ctaProjects: 'View projects',
+      ctaGithub: 'GitHub',
+      photoCaption: 'Sara Khudadad — developer',
+    },
+    about: {
+      title: 'About',
+      body: [
+        'I study Applied Computer Technology at OsloMet and work as a student assistant at the IT service desk, helping students and staff with everything from troubleshooting to equipment.',
+        'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
+        "Today I build my own projects in Java and React, and I'm at my best when I get to learn something new and watch it work in practice.",
+      ],
+    },
+    projects: {
+      title: 'Selected projects',
+      seeAll: 'See all on GitHub →',
+      liveLabel: 'Live demo',
+      items: [
+        {
+          index: '01',
+          tag: 'Hobby',
+          name: 'Jeoparty',
+          desc: 'A Jeopardy-inspired party game built with React, with customizable categories and questions for playing with friends and family.',
+          tech: ['React', 'TypeScript', 'Vite'],
+          repo: 'Jeoparty',
+          live: null,
+        },
+        {
+          index: '02',
+          tag: 'In progress',
+          name: 'Wedding website',
+          desc: 'A website built for a wedding — currently in progress.',
+          tech: ['React'],
+          repo: null,
+          live: null,
+        },
+      ],
+    },
+    skills: {
+      title: 'Skills',
+      groups: [
+        { label: 'Languages', items: ['Java', 'JavaScript / TypeScript', 'HTML / CSS', 'SQL'] },
+        { label: 'Frameworks & tools', items: ['IntelliJ IDEA', 'VS Code', 'Git / GitHub', 'React'] },
+      ],
+    },
+    learning: {
+      title: 'Currently learning',
+      items: [
+        'Building full-stack projects in React (Jeoparty, wedding website)',
+        'Applied Computer Technology — ongoing studies at OsloMet',
+      ],
+    },
+    education: {
+      title: 'Education',
+      groups: [
+        {
+          label: 'Education',
+          items: ['Applied Computer Technology — OsloMet (2024 – present)', 'Nursing — VID Specialized University (2021 – 2024)'],
+        },
+        {
+          label: 'Languages',
+          items: ['Norwegian — native', 'English — fluent', 'Kurdish — fluent'],
+        },
+      ],
+    },
+    experience: {
+      title: 'Experience',
+      showMore: 'Show earlier experience',
+      showLess: 'Show less',
+      items: [
+        {
+          date: 'Oct 2025 – present',
+          role: 'Student Assistant, IT Service Desk',
+          place: 'OsloMet',
+          current: true,
+          bullets: [
+            'Assists students and staff with IT-related questions and issues',
+            'Incident handling and guidance on IT systems and services',
+            'Administrator access (admin account) to IT systems for setup and troubleshooting',
+            'Setup, loan and handout of PCs and equipment',
+          ],
+        },
+        {
+          date: 'Jun 2025 – present',
+          role: 'Medical Advisor',
+          place: 'Vertikal Helse / If Insurance, Oslo',
+          current: true,
+          bullets: [
+            'Advises and guides on health services and the use of digital solutions',
+            'Handles enquiries from customers and providers, with a focus on great customer experiences',
+            'Works in cross-disciplinary teams',
+          ],
+        },
+        {
+          date: 'Sep 2024 – 2025',
+          role: 'Support Worker',
+          place: 'Edvard Munch Upper Secondary School, Oslo municipality',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2024',
+          role: 'Nurse, Home Care Services',
+          place: 'Kristiansand municipality',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2019 – 2024',
+          role: 'Care Assistant',
+          place: 'Kristiansand municipality / Oslo municipality',
+          current: false,
+          bullets: [],
+        },
+        {
+          date: '2015 – 2020',
+          role: 'Sales & Service Associate',
+          place: 'Peppes Pizza, Sørlandssenteret',
+          current: false,
+          bullets: [],
+        },
+      ],
+    },
+    contact: {
+      eyebrow: 'Get in touch',
+      title: 'Contact me',
+      desc: 'Open to part-time positions, internships and exciting projects.',
+      email: 'sarasabir26@outlook.com',
+      phone: '+47 901 93 636',
+    },
+    footer: {
+      copyright: '© 2026 Sara Khudadad',
+      hosted: 'Hosted on GitHub Pages',
+    },
+  },
+}
