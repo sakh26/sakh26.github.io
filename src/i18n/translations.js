@@ -1,5 +1,6 @@
 export const translations = {
   no: {
+    docTitle: 'Sara Khudadad — Utvikler',
     nav: {
       links: [
         { href: '#om', label: 'Om meg' },
@@ -10,6 +11,9 @@ export const translations = {
         { href: '#kontakt', label: 'Kontakt' },
       ],
       cv: 'Last ned CV',
+      menuLabel: 'Hovedmeny',
+      themeToggle: 'Bytt lyst / mørkt tema',
+      langToggle: 'Bytt språk / Switch language',
     },
     hero: {
       eyebrow: 'Utvikler · Oslo',
@@ -153,6 +157,7 @@ export const translations = {
     },
   },
   en: {
+    docTitle: 'Sara Khudadad — Developer',
     nav: {
       links: [
         { href: '#om', label: 'About' },
@@ -163,6 +168,9 @@ export const translations = {
         { href: '#kontakt', label: 'Contact' },
       ],
       cv: 'Download CV',
+      menuLabel: 'Main menu',
+      themeToggle: 'Toggle light / dark theme',
+      langToggle: 'Switch language / Bytt språk',
     },
     hero: {
       eyebrow: 'Developer · Oslo',

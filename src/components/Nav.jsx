@@ -11,7 +11,7 @@ export default function Nav() {
   return (
     <header className="nav">
       <a href="#om" className="nav-logo">Sara Khudadad</a>
-      <nav aria-label="Hovedmeny">
+      <nav aria-label={t.nav.menuLabel}>
         <ul className="nav-links">
           {t.nav.links.map((link) => (
             <li key={link.href}>
@@ -30,7 +30,7 @@ export default function Nav() {
           type="button"
           className="theme-toggle"
           onClick={toggleTheme}
-          aria-label="Bytt lyst / mørkt tema"
+          aria-label={t.nav.themeToggle}
         >
           {theme === 'light' ? '☾' : '☀'}
         </button>
@@ -38,7 +38,7 @@ export default function Nav() {
           type="button"
           className="lang-toggle"
           onClick={toggleLang}
-          aria-label="Bytt språk / Switch language"
+          aria-label={t.nav.langToggle}
         >
           <span className={lang === 'no' ? 'lang-active' : ''}>NO</span>
           <span className="lang-sep">/</span>

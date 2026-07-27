@@ -9,6 +9,7 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = lang
+    document.title = translations[lang].docTitle
   }, [lang])
 
   return (
