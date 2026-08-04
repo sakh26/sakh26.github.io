@@ -37,16 +37,20 @@ export const translations = {
     projects: {
       title: 'Utvalgte prosjekter',
       seeAll: 'Se alle på GitHub →',
-      liveLabel: 'Live demo',
+      liveLabel: 'Prøv den',
+      videoLabel: 'Se demo',
+      videoPlay: 'Spill av demovideo',
       items: [
         {
           index: '01',
           tag: 'Hobby',
           name: 'Jeoparty',
-          desc: 'Jeopardy-inspirert partyspill bygget i React, med tilpassbare kategorier og spørsmål for spill med venner og familie.',
-          tech: ['React', 'TypeScript', 'Vite'],
+          desc: 'Jeopardy-spill for quizkvelder, laget til en bursdag og siden generalisert til å håndtere alle temaer. Egne spørsmålspakker i JSON, innebygd editor, Double Jeopardy og valgfri Spotify-avspilling via OAuth 2.0 PKCE. TypeScript i strict mode, 51 enhetstester og CI som kjører typecheck, lint, tester og bygg.',
+          tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
-          live: null,
+          live: 'https://sakh26.github.io/Jeoparty/',
+          video: null,
+          videoPoster: null,
         },
         {
           index: '02',
@@ -194,16 +198,20 @@ export const translations = {
     projects: {
       title: 'Selected projects',
       seeAll: 'See all on GitHub →',
-      liveLabel: 'Live demo',
+      liveLabel: 'Try it',
+      videoLabel: 'Watch demo',
+      videoPlay: 'Play demo video',
       items: [
         {
           index: '01',
           tag: 'Hobby',
           name: 'Jeoparty',
-          desc: 'A Jeopardy-inspired party game built with React, with customizable categories and questions for playing with friends and family.',
-          tech: ['React', 'TypeScript', 'Vite'],
+          desc: 'A Jeopardy game for quiz nights — built for a birthday, then generalised to handle any topic. Custom question packs in JSON, a built-in editor, Double Jeopardy and optional Spotify playback via OAuth 2.0 PKCE. TypeScript in strict mode, 51 unit tests, and CI running typecheck, lint, tests and build.',
+          tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
-          live: null,
+          live: 'https://sakh26.github.io/Jeoparty/',
+          video: null,
+          videoPoster: null,
         },
         {
           index: '02',

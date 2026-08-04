@@ -345,6 +345,67 @@ section.reveal.is-visible {
   color: var(--ink);
   border-color: var(--ink);
 }
+/* Live-demoen er hovedhandlingen på kortet — den skal leses først. */
+.proj-link-live {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom-color: var(--ink-40);
+}
+
+/* ─── PROSJEKTVIDEO ──────────────────────────────────── */
+.proj-video,
+.proj-video-trigger {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.25rem;
+  border-radius: var(--radius);
+  border: 0.5px solid var(--border);
+  background-color: var(--bg);
+}
+.proj-video {
+  object-fit: cover;
+}
+.proj-video-trigger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  color: var(--ink);
+  font-family: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.proj-video-trigger:hover {
+  border-color: var(--ink-40);
+  transform: translateY(-2px);
+}
+.proj-video-play {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  font-size: 0.9rem;
+  padding-left: 3px;
+}
+.proj-video-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+@media (prefers-reduced-motion: reduce) {
+  .proj-video-trigger:hover {
+    transform: none;
+  }
+}
 
 /* ─── SKILLS ─────────────────────────────────────────── */
 .skills-grid {

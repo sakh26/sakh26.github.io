@@ -1,4 +1,5 @@
 import { useLanguage } from '../i18n/LanguageContext'
+import ProjectVideo from './ProjectVideo'
 
 export default function Projects() {
   const { t } = useLanguage()
@@ -30,6 +31,14 @@ export default function Projects() {
             <h3 className="proj-name">{project.name}</h3>
             <p className="proj-desc">{project.desc}</p>
 
+            {project.video && (
+              <ProjectVideo
+                src={project.video}
+                poster={project.videoPoster}
+                name={project.name}
+              />
+            )}
+
             <ul className="proj-tech">
               {project.tech.map((tech) => (
                 <li key={tech}>{tech}</li>
@@ -37,6 +46,16 @@ export default function Projects() {
             </ul>
 
             <div className="proj-actions">
+              {project.live && (
+                <a
+                  href={project.live}
+                  className="proj-link proj-link-live"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t.projects.liveLabel} →
+                </a>
+              )}
               {project.repo && (
                 <a
                   href={`https://github.com/sakh26/${project.repo}`}
@@ -45,11 +64,6 @@ export default function Projects() {
                   rel="noopener"
                 >
                   GitHub →
-                </a>
-              )}
-              {project.live && (
-                <a href={project.live} className="proj-link" target="_blank" rel="noopener">
-                  {t.projects.liveLabel} →
                 </a>
               )}
             </div>
