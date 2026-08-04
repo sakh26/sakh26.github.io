@@ -46,7 +46,22 @@ Søk også i filene under `src/components/` etter:
 |---|---|
 | `ditt-brukernavn` | GitHub-brukernavnet ditt |
 | `ditt-navn` (LinkedIn) | LinkedIn-brukernavnet ditt |
-| `DIN_YOUTUBE_ID_1/2/3` (i `translations.js`) | YouTube-video-ID-ene dine |
+
+### Demovideo på et prosjektkort
+
+Hvert prosjekt i `translations.js` kan ha to valgfrie felter:
+
+```js
+video: '/media/jeoparty-demo.mp4',
+videoPoster: '/media/jeoparty-poster.jpg',
+```
+
+Legg filene i `public/media/`. Når `video` er satt, viser kortet et klikkbart
+plakatbilde — selve videoen lastes først når noen trykker play, så mobilbrukere
+ikke betaler for den uoppfordret. Uten `videoPoster` vises en nøytral flate med
+play-knapp. Husk å sette feltene i **både** `no` og `en`.
+
+Anbefalt format: MP4 (H.264), 1280×720, 30–45 sekunder, uten lyd, under ~8 MB.
 
 ---
 
@@ -81,27 +96,17 @@ git push -u origin main
 
 ## Steg 5 — Publiser med GitHub Pages
 
-Siden dette nå er et React-prosjekt (Vite), må siden **bygges** før den kan hostes —
-GitHub Pages kan ikke kjøre React direkte. Enkleste måte er `gh-pages`-pakken:
+Siden dette er et React-prosjekt (Vite), må siden **bygges** før den kan hostes —
+GitHub Pages kan ikke kjøre React direkte. Det gjøres automatisk av
+`.github/workflows/pages.yml`, som ved hver push til `main` kjører lint, bygger
+prosjektet og publiserer `dist/`.
 
-```bash
-npm install --save-dev gh-pages
-```
+To engangsinnstillinger på GitHub:
 
-Legg til i `package.json` under `"scripts"`:
+1. **Settings → General → Change repository visibility → Public**
+   Pages fra private repo krever GitHub Pro; på gratisplanen må repoet være offentlig.
+2. **Settings → Pages → Source → GitHub Actions**
 
-```json
-"predeploy": "npm run build",
-"deploy": "gh-pages -d dist"
-```
-
-Deretter, hver gang du vil publisere:
-
-```bash
-npm run deploy
-```
-
-Gå til repoet → **Settings** → **Pages** → velg branch `gh-pages` → **Save**.
 Etter 1–2 minutter er siden live på **`https://ditt-brukernavn.github.io`**.
 
 ---
@@ -113,8 +118,9 @@ Etter 1–2 minutter er siden live på **`https://ditt-brukernavn.github.io`**.
 git add .
 git commit -m "oppdatering: ..."
 git push
-npm run deploy
 ```
+
+Pushen trigger workflowen — ingen egen deploy-kommando. Følg med under **Actions**-fanen.
 
 ---
 
