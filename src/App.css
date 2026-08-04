@@ -401,6 +401,29 @@ section.reveal.is-visible {
   text-transform: uppercase;
   color: var(--ink-60);
 }
+/* A poster is an arbitrary image, so neither theme's ink is guaranteed to read
+   against it. Lay a scrim under the controls and fix them to light-on-dark. */
+.proj-video-trigger.has-poster::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.55));
+}
+.proj-video-trigger.has-poster .proj-video-play,
+.proj-video-trigger.has-poster .proj-video-label {
+  position: relative;
+  z-index: 1;
+}
+.proj-video-trigger.has-poster .proj-video-play {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: transparent;
+  color: #1a1a1a;
+}
+.proj-video-trigger.has-poster .proj-video-label {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 @media (prefers-reduced-motion: reduce) {
   .proj-video-trigger:hover {
     transform: none;

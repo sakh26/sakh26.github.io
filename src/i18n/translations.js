@@ -38,7 +38,7 @@ export const translations = {
       title: 'Utvalgte prosjekter',
       seeAll: 'Se alle på GitHub →',
       liveLabel: 'Prøv den',
-      videoLabel: 'Se demo',
+      videoLabel: 'Se demo · 33 sek',
       videoPlay: 'Spill av demovideo',
       items: [
         {
@@ -49,8 +49,8 @@ export const translations = {
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',
-          video: null,
-          videoPoster: null,
+          video: '/media/jeoparty-demo.mp4',
+          videoPoster: '/media/jeoparty-poster.jpg',
         },
         {
           index: '02',
@@ -199,7 +199,7 @@ export const translations = {
       title: 'Selected projects',
       seeAll: 'See all on GitHub →',
       liveLabel: 'Try it',
-      videoLabel: 'Watch demo',
+      videoLabel: 'Watch demo · 33 sec',
       videoPlay: 'Play demo video',
       items: [
         {
@@ -210,8 +210,8 @@ export const translations = {
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',
-          video: null,
-          videoPoster: null,
+          video: '/media/jeoparty-demo.mp4',
+          videoPoster: '/media/jeoparty-poster.jpg',
         },
         {
           index: '02',

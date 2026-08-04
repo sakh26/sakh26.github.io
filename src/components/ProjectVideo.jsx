@@ -27,7 +27,7 @@ export default function ProjectVideo({ src, poster, name }) {
   return (
     <button
       type="button"
-      className="proj-video-trigger"
+      className={`proj-video-trigger${poster ? ' has-poster' : ''}`}
       onClick={() => setPlaying(true)}
       aria-label={`${t.projects.videoPlay} — ${name}`}
       style={poster ? { backgroundImage: `url(${poster})` } : undefined}
