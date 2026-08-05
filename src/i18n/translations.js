@@ -38,7 +38,7 @@ export const translations = {
       title: 'Utvalgte prosjekter',
       seeAll: 'Se alle på GitHub →',
       liveLabel: 'Prøv den',
-      videoLabel: 'Se demo · 33 sek',
+      videoLabel: 'Se demo · 56 sek',
       videoPlay: 'Spill av demovideo',
       items: [
         {
@@ -199,7 +199,7 @@ export const translations = {
       title: 'Selected projects',
       seeAll: 'See all on GitHub →',
       liveLabel: 'Try it',
-      videoLabel: 'Watch demo · 33 sec',
+      videoLabel: 'Watch demo · 56 sec',
       videoPlay: 'Play demo video',
       items: [
         {
