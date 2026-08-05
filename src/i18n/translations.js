@@ -19,7 +19,7 @@ export const translations = {
       eyebrow: 'Utvikler · Oslo',
       title: ['Sara', 'Khudadad'],
       credentials: [
-        { main: 'Bachelor i Anvendt Datateknologi', detail: 'OsloMet · retning programmering' },
+        { main: 'Bachelorstudent i Anvendt Datateknologi', detail: 'OsloMet · retning programmering · ferdig sommeren 2027' },
         { main: 'Autorisert sykepleier', detail: null },
       ],
       ctaProjects: 'Se prosjekter',
@@ -31,7 +31,7 @@ export const translations = {
       body: [
         'Jeg studerer Anvendt Datateknologi ved OsloMet og jobber som studentassistent på IT-servicedesken, der jeg hjelper studenter og ansatte med alt fra feilsøking til utstyr.',
         'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
-        'Nå bygger jeg egne prosjekter i Java og React, og trives best når jeg får lære noe nytt og se det fungere i praksis.',
+        'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Jeoparty startet som en gøy lek jeg ønsket å lage til bursdagsfeiringen min, og ble siden bygget videre med tester og automatisk bygg. Jeg trives best når jeg får lære noe nytt og se det fungere i praksis.',
       ],
     },
     projects: {
@@ -45,7 +45,7 @@ export const translations = {
           index: '01',
           tag: 'Hobby',
           name: 'Jeoparty',
-          desc: 'Jeopardy-spill for quizkvelder, laget til en bursdag og siden generalisert til å håndtere alle temaer. Egne spørsmålspakker i JSON, innebygd editor, Double Jeopardy og valgfri Spotify-avspilling via OAuth 2.0 PKCE. TypeScript i strict mode, 51 enhetstester og CI som kjører typecheck, lint, tester og bygg.',
+          desc: 'Jeopardy-spill for quizkvelder, laget til en bursdag og siden generalisert til å håndtere alle temaer. Egne spørsmålspakker i JSON, innebygd editor, Double Jeopardy og valgfri Spotify-avspilling via OAuth 2.0 PKCE. TypeScript i strict mode, enhetstester og CI som kjører typecheck, lint, tester og bygg.',
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',
@@ -56,7 +56,7 @@ export const translations = {
           index: '02',
           tag: 'Under utvikling',
           name: 'Bryllupsnettside',
-          desc: 'Nettside laget for et bryllup — under utvikling.',
+          desc: 'Nettside til et bryllup: program for dagen, informasjon om stedet, påmelding for gjestene og en adminside med bordplassering. Under utvikling.',
           tech: ['React'],
           repo: null,
           live: null,
@@ -66,14 +66,15 @@ export const translations = {
     skills: {
       title: 'Ferdigheter',
       groups: [
-        { label: 'Språk', items: ['Java', 'JavaScript / TypeScript', 'HTML / CSS', 'SQL'] },
-        { label: 'Rammeverk & verktøy', items: ['IntelliJ IDEA', 'VS Code', 'Git / GitHub', 'React'] },
+        { label: 'Språk', items: ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'] },
+        { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'React', 'Bootstrap'] },
+        { label: 'Verktøy & systemer', items: ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
       ],
     },
     learning: {
       title: 'Under læring',
       items: [
-        'Bygger fullstack-prosjekter i React (Jeoparty, bryllupsnettside)',
+        'Bygger egne webprosjekter i React og TypeScript (Jeoparty, bryllupsnettside)',
         'Anvendt Datateknologi — pågående studie ved OsloMet',
       ],
     },
@@ -82,7 +83,7 @@ export const translations = {
       groups: [
         {
           label: 'Utdannelse',
-          items: ['Anvendt Datateknologi — OsloMet (2024 – nå)', 'Sykepleier — VID Vitenskapelige Høgskole (2021 – 2024)'],
+          items: ['Anvendt Datateknologi — OsloMet (2024 – 2027)', 'Sykepleier — VID Vitenskapelige Høgskole (2021 – 2024)'],
         },
         {
           label: 'Språk',
@@ -151,7 +152,7 @@ export const translations = {
     contact: {
       eyebrow: 'Ta kontakt',
       title: 'Kontakt meg',
-      desc: 'På utkikk etter en fulltidsstilling. Ta gjerne kontakt.',
+      desc: 'Ferdig utdannet sommeren 2027, og søker fulltidsstilling med oppstart derfra. Ta gjerne kontakt.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
@@ -180,7 +181,7 @@ export const translations = {
       eyebrow: 'Developer · Oslo',
       title: ['Sara', 'Khudadad'],
       credentials: [
-        { main: "Bachelor's in Applied Computer Technology", detail: 'OsloMet · programming track' },
+        { main: "Bachelor's student in Applied Computer Technology", detail: 'OsloMet · programming track · graduating summer 2027' },
         { main: 'Licensed nurse', detail: null },
       ],
       ctaProjects: 'View projects',
@@ -192,7 +193,7 @@ export const translations = {
       body: [
         'I study Applied Computer Technology at OsloMet and work as a student assistant at the IT service desk, helping students and staff with everything from troubleshooting to equipment.',
         'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
-        "Today I build my own projects in Java and React, and I'm at my best when I get to learn something new and watch it work in practice.",
+        "Alongside my studies and two jobs, I build my own projects in my spare time. Jeoparty started as a fun game I wanted to make for my own birthday party, and later grew to include tests and automated builds. I'm at my best when I get to learn something new and watch it work in practice.",
       ],
     },
     projects: {
@@ -206,7 +207,7 @@ export const translations = {
           index: '01',
           tag: 'Hobby',
           name: 'Jeoparty',
-          desc: 'A Jeopardy game for quiz nights — built for a birthday, then generalised to handle any topic. Custom question packs in JSON, a built-in editor, Double Jeopardy and optional Spotify playback via OAuth 2.0 PKCE. TypeScript in strict mode, 51 unit tests, and CI running typecheck, lint, tests and build.',
+          desc: 'A Jeopardy game for quiz nights — built for a birthday, then generalised to handle any topic. Custom question packs in JSON, a built-in editor, Double Jeopardy and optional Spotify playback via OAuth 2.0 PKCE. TypeScript in strict mode, unit tests, and CI running typecheck, lint, tests and build.',
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',
@@ -217,7 +218,7 @@ export const translations = {
           index: '02',
           tag: 'In progress',
           name: 'Wedding website',
-          desc: 'A website built for a wedding — currently in progress.',
+          desc: 'A website for a wedding: the programme for the day, venue details, guest RSVP and an admin page for table seating. Currently in progress.',
           tech: ['React'],
           repo: null,
           live: null,
@@ -227,14 +228,15 @@ export const translations = {
     skills: {
       title: 'Skills',
       groups: [
-        { label: 'Languages', items: ['Java', 'JavaScript / TypeScript', 'HTML / CSS', 'SQL'] },
-        { label: 'Frameworks & tools', items: ['IntelliJ IDEA', 'VS Code', 'Git / GitHub', 'React'] },
+        { label: 'Languages', items: ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'] },
+        { label: 'Frameworks & libraries', items: ['Spring Boot', 'React', 'Bootstrap'] },
+        { label: 'Tools & systems', items: ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
       ],
     },
     learning: {
       title: 'Currently learning',
       items: [
-        'Building full-stack projects in React (Jeoparty, wedding website)',
+        'Building my own web projects in React and TypeScript (Jeoparty, wedding website)',
         'Applied Computer Technology — ongoing studies at OsloMet',
       ],
     },
@@ -243,7 +245,7 @@ export const translations = {
       groups: [
         {
           label: 'Education',
-          items: ['Applied Computer Technology — OsloMet (2024 – present)', 'Nursing — VID Specialized University (2021 – 2024)'],
+          items: ['Applied Computer Technology — OsloMet (2024 – 2027)', 'Nursing — VID Specialized University (2021 – 2024)'],
         },
         {
           label: 'Languages',
@@ -312,7 +314,7 @@ export const translations = {
     contact: {
       eyebrow: 'Get in touch',
       title: 'Contact me',
-      desc: 'Looking for a full-time position. Feel free to reach out.',
+      desc: 'Graduating summer 2027 and looking for a full-time position starting from then. Feel free to reach out.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
