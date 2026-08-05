@@ -351,6 +351,25 @@ section.reveal.is-visible {
   margin-bottom: 1rem;
   max-width: 42ch;
 }
+.proj-why {
+  max-width: 42ch;
+  margin-bottom: 1.25rem;
+  padding-left: 0.9rem;
+  border-left: 0.5px solid var(--border);
+}
+.proj-why-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-40);
+  margin-bottom: 0.35rem;
+}
+.proj-why p {
+  font-size: 0.88rem;
+  color: var(--ink-60);
+  line-height: 1.6;
+}
 .proj-link {
   font-size: 0.78rem;
   color: var(--ink-40);

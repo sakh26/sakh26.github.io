@@ -38,6 +38,7 @@ export const translations = {
     projects: {
       title: 'Utvalgte prosjekter',
       seeAll: 'Se alle på GitHub →',
+      whyLabel: 'Hvorfor jeg lagde den',
       liveLabel: 'Prøv den',
       videoLabel: 'Se demo · 56 sek',
       videoPlay: 'Spill av demovideo',
@@ -47,6 +48,7 @@ export const translations = {
           tag: 'Hobby',
           name: 'Jeoparty',
           desc: 'Jeopardy-spill for quizkvelder, laget til en bursdag og siden generalisert til å håndtere alle temaer. Egne spørsmålspakker i JSON, innebygd editor, Double Jeopardy og valgfri Spotify-avspilling via OAuth 2.0 PKCE. TypeScript i strict mode, enhetstester og CI som kjører typecheck, lint, tester og bygg.',
+          why: 'Jeg hadde spilt Jeopardy i flere selskaper, men alltid på samme måte: verten hadde laget en stor plakat med kategorier, poeng og lagnavn, og satt med mobilen for å finne riktig sang. Det ble mye hoderegning, noteringer og leting midt i moroa. Jeg ville ha det digitalt. Sangen starter når du trykker på ruten, poengene summerer seg selv, og lagene ligger inne fra start. Etterpå utvidet jeg det så hvem som helst kan lage egne kategorier, spørsmål, hint og lag, i stedet for at spillet bare passet til min bursdag.',
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',
@@ -201,6 +203,7 @@ export const translations = {
     projects: {
       title: 'Selected projects',
       seeAll: 'See all on GitHub →',
+      whyLabel: 'Why I built it',
       liveLabel: 'Try it',
       videoLabel: 'Watch demo · 56 sec',
       videoPlay: 'Play demo video',
@@ -210,6 +213,7 @@ export const translations = {
           tag: 'Hobby',
           name: 'Jeoparty',
           desc: 'A Jeopardy game for quiz nights — built for a birthday, then generalised to handle any topic. Custom question packs in JSON, a built-in editor, Double Jeopardy and optional Spotify playback via OAuth 2.0 PKCE. TypeScript in strict mode, unit tests, and CI running typecheck, lint, tests and build.',
+          why: "I'd played Jeopardy at plenty of parties, but always the same way: the host had made a big poster with categories, scores and team names, and sat with their phone to find the right song. It meant a lot of mental arithmetic, note-taking and searching in the middle of the fun. I wanted it digital. The song starts when you click a tile, the scores add themselves up, and the teams are in from the start. Afterwards I extended it so anyone can build their own categories, questions, hints and teams, instead of the game only fitting my own birthday.",
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
           live: 'https://sakh26.github.io/Jeoparty/',

@@ -31,6 +31,13 @@ export default function Projects() {
             <h3 className="proj-name">{project.name}</h3>
             <p className="proj-desc">{project.desc}</p>
 
+            {project.why && (
+              <div className="proj-why">
+                <h4 className="proj-why-label">{t.projects.whyLabel}</h4>
+                <p>{project.why}</p>
+              </div>
+            )}
+
             {project.video && (
               <ProjectVideo
                 src={project.video}
