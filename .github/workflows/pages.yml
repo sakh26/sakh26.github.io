@@ -58,3 +58,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        # Pages has been slow to pick deployments up; the default ten minutes
+        # ran out while ours was still queued.
+        with:
+          timeout: 1800000
