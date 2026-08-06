@@ -17,15 +17,6 @@ export default function Skills() {
             </ul>
           </div>
         ))}
-
-        <div className="skills-group learning-group">
-          <h3 className="skills-group-label">{t.learning.title}</h3>
-          <ul className="skills-list">
-            {t.learning.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
       </div>
     </section>
   )

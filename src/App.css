@@ -491,10 +491,6 @@ section.reveal.is-visible {
   padding: 0.35rem 0;
   border-bottom: 0.5px solid var(--border);
 }
-.learning-group .skills-list li {
-  color: var(--ink);
-}
-
 /* ─── EXPERIENCE ─────────────────────────────────────── */
 .timeline {
   display: flex;
