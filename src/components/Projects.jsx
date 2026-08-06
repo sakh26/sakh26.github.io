@@ -46,11 +46,13 @@ export default function Projects() {
               />
             )}
 
-            <ul className="proj-tech">
-              {project.tech.map((tech) => (
-                <li key={tech}>{tech}</li>
-              ))}
-            </ul>
+            {project.tech.length > 0 && (
+              <ul className="proj-tech">
+                {project.tech.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+            )}
 
             <div className="proj-actions">
               {project.live && (
