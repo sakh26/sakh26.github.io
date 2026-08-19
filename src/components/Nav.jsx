@@ -60,7 +60,7 @@ export default function Nav() {
           <span className="lang-sep">/</span>
           <span className={lang === 'en' ? 'lang-active' : ''}>EN</span>
         </button>
-        <a href="/cv.pdf" className="nav-cv" download="CV - Sara Khudadad.pdf">
+        <a href={`/cv-${lang}.pdf`} className="nav-cv" download={t.nav.cvFile}>
           {t.nav.cv}
         </a>
         <button
