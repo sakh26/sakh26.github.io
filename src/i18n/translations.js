@@ -11,6 +11,7 @@ export const translations = {
         { href: '#kontakt', label: 'Kontakt' },
       ],
       cv: 'Last ned CV',
+      cvFile: 'CV - Sara Khudadad.pdf',
       menuLabel: 'Hovedmeny',
       menuToggle: 'Åpne eller lukke menyen',
       themeToggle: 'Bytt lyst / mørkt tema',
@@ -32,7 +33,7 @@ export const translations = {
       body: [
         'Jeg studerer Anvendt Datateknologi ved OsloMet og jobber som studentassistent på IT-servicedesken, der jeg hjelper studenter og ansatte med alt fra feilsøking til utstyr.',
         'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
-        'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Jeoparty startet som en gøy lek jeg ønsket å lage til bursdagsfeiringen min, og ble siden bygget videre med tester og automatisk bygg. Jeg trives best når jeg får lære noe nytt og se det fungere i praksis.',
+        'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Så langt har det blitt et spill til bursdagen min og en nettside til et bryllup.',
       ],
     },
     projects: {
@@ -59,7 +60,7 @@ export const translations = {
           index: '02',
           tag: 'Under utvikling',
           name: 'Bryllupsnettside',
-          desc: 'Nettside til et bryllup: program for dagen, informasjon om stedet, påmelding for gjestene og en adminside med bordplassering. Under utvikling.',
+          desc: 'Nettside til et bryllup: program for dagen, informasjon om stedet, påmelding for gjestene og en adminside med bordplassering.',
           tech: [],
           repo: null,
           live: null,
@@ -98,9 +99,8 @@ export const translations = {
           place: 'OsloMet',
           current: true,
           bullets: [
-            'Bistår studenter og ansatte med IT-relaterte spørsmål og problemer',
-            'Hendelseshåndtering og veiledning i IT-systemer og tjenester',
-            'Administratortilgang (admin-konto) i IT-systemene for oppsett og feilsøking',
+            'Håndterer henvendelser fra studenter og ansatte, fra feilsøking til veiledning i IT-systemene',
+            'Administratortilgang i IT-systemene for oppsett og feilsøking',
             'Oppsett, utlån og utlevering av PC og utstyr',
           ],
         },
@@ -110,9 +110,9 @@ export const translations = {
           place: 'Vertikal Helse / If Helseforsikring, Oslo',
           current: true,
           bullets: [
-            'Rådgivning og veiledning i helsetjenester og bruk av digitale løsninger',
-            'Håndterer henvendelser fra kunder og leverandører, med fokus på gode kundeopplevelser',
-            'Arbeider i tverrfaglige team',
+            'Besvarer kundehenvendelser om sykdom og hva helseforsikringen dekker, og formidler videre til klinikker og leverandører i nettverket',
+            'Leser epikriser fra klinikkene og vurderer veien videre for kunden',
+            'Håndterer sensitive helseopplysninger på telefon og i saksbehandlingssystemet IRX, etter taushetsplikt og GDPR',
           ],
         },
         {
@@ -169,6 +169,7 @@ export const translations = {
         { href: '#kontakt', label: 'Contact' },
       ],
       cv: 'Download CV',
+      cvFile: 'CV - Sara Khudadad (English).pdf',
       menuLabel: 'Main menu',
       menuToggle: 'Open or close the menu',
       themeToggle: 'Toggle light / dark theme',
@@ -190,7 +191,7 @@ export const translations = {
       body: [
         'I study Applied Computer Technology at OsloMet and work as a student assistant at the IT service desk, helping students and staff with everything from troubleshooting to equipment.',
         'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
-        "Alongside my studies and two jobs, I build my own projects in my spare time. Jeoparty started as a fun game I wanted to make for my own birthday party, and later grew to include tests and automated builds. I'm at my best when I get to learn something new and watch it work in practice.",
+        "Alongside my studies and two jobs, I build my own projects in my spare time. So far that's a game for my own birthday and a website for a wedding.",
       ],
     },
     projects: {
@@ -217,7 +218,7 @@ export const translations = {
           index: '02',
           tag: 'In progress',
           name: 'Wedding website',
-          desc: 'A website for a wedding: the programme for the day, venue details, guest RSVP and an admin page for table seating. Currently in progress.',
+          desc: 'A website for a wedding: the programme for the day, venue details, guest RSVP and an admin page for table seating.',
           tech: [],
           repo: null,
           live: null,
@@ -256,9 +257,8 @@ export const translations = {
           place: 'OsloMet',
           current: true,
           bullets: [
-            'Assists students and staff with IT-related questions and issues',
-            'Incident handling and guidance on IT systems and services',
-            'Administrator access (admin account) to IT systems for setup and troubleshooting',
+            'Handles enquiries from students and staff, from troubleshooting to guidance on the IT systems',
+            'Administrator access to the IT systems for setup and troubleshooting',
             'Setup, loan and handout of PCs and equipment',
           ],
         },
@@ -268,9 +268,9 @@ export const translations = {
           place: 'Vertikal Helse / If Insurance, Oslo',
           current: true,
           bullets: [
-            'Advises and guides on health services and the use of digital solutions',
-            'Handles enquiries from customers and providers, with a focus on great customer experiences',
-            'Works in cross-disciplinary teams',
+            'Answers customer enquiries about illness and what the health insurance covers, and routes them on to clinics and providers in the network',
+            'Reads discharge summaries from the clinics and assesses the next step for the customer',
+            'Handles sensitive health data by phone and in the IRX case system, under confidentiality rules and GDPR',
           ],
         },
         {
