@@ -23,11 +23,11 @@ export default function Contact() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/sara-khudadad-750381362"
+              href="https://www.linkedin.com/in/sara-khudadad-dev"
               target="_blank"
               rel="noopener"
             >
-              LinkedIn
+              Sara Khudadad
             </a>
           </li>
         </ul>

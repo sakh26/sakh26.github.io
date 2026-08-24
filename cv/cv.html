@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CV Sara Khudadad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f7f5f1;
+        --sidebar: #ddd1c3;
+        --ink: #2e2b26;
+        --body: #5c574e;
+        --muted: #79726a;
+        --rule: #c7c0b5;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background: #8c877e;
+      }
+
+      body {
+        font-family: Inter, 'Segoe UI', Arial, sans-serif;
+        font-size: 9.1pt;
+        line-height: 1.42;
+        color: var(--body);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* ---------- toolbar (screen only) ---------- */
+      .toolbar {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        z-index: 10;
+        display: flex;
+        gap: 8px;
+        font-size: 13px;
+      }
+
+      .toolbar button {
+        font: inherit;
+        font-family: Inter, 'Segoe UI', Arial, sans-serif;
+        padding: 7px 14px;
+        border: 1px solid #4a4640;
+        border-radius: 999px;
+        background: #fff;
+        color: #2e2b26;
+        cursor: pointer;
+      }
+
+      .toolbar button[aria-pressed='true'] {
+        background: #2e2b26;
+        border-color: #2e2b26;
+        color: #fff;
+      }
+
+      .hint {
+        max-width: 210mm;
+        margin: 60px auto 0;
+        padding: 12px 16px;
+        border-radius: 8px;
+        background: #fff;
+        color: #2e2b26;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      /* ---------- page ---------- */
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 18px auto;
+        padding: 13mm 12mm 10mm;
+        background: var(--paper);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+      }
+
+      /* ---------- header ---------- */
+      .header {
+        display: flex;
+        gap: 13px;
+        align-items: flex-start;
+        padding-bottom: 9px;
+      }
+
+      .photo {
+        width: 27mm;
+        height: 32mm;
+        flex: none;
+        object-fit: cover;
+        border-radius: 3px;
+      }
+
+      .eyebrow {
+        font-size: 7.4pt;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-top: 4px;
+      }
+
+      .name {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        font-size: 30pt;
+        font-weight: 400;
+        line-height: 1.08;
+        color: var(--ink);
+        margin: 4px 0 7px;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 13px;
+        font-size: 8.6pt;
+      }
+
+      .contact a {
+        text-decoration: none;
+      }
+
+      .header-rule {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin-bottom: 11px;
+      }
+
+      /* ---------- columns ---------- */
+      .cols {
+        display: flex;
+        gap: 9mm;
+        align-items: flex-start;
+      }
+
+      .main {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .aside {
+        flex: 0 0 52mm;
+        background: var(--sidebar);
+        border-radius: 5px;
+        padding: 7mm 6mm;
+      }
+
+      /* ---------- sections ---------- */
+      .label {
+        font-size: 7.4pt;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 5px;
+      }
+
+      .main section {
+        margin-bottom: 11px;
+      }
+
+      .main section > .label + * {
+        border-top: 1px solid var(--rule);
+        padding-top: 7px;
+      }
+
+      .summary {
+        font-size: 9.1pt;
+      }
+
+      .entry {
+        border-top: 1px solid var(--rule);
+        padding: 7px 0;
+        break-inside: avoid;
+      }
+
+      .entry-close {
+        border-top: 1px solid var(--rule);
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      .entry-title {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .entry-title .thin {
+        font-weight: 400;
+        color: var(--body);
+      }
+
+      .entry-date {
+        flex: none;
+        font-size: 8.6pt;
+        color: var(--body);
+      }
+
+      ul.bullets {
+        list-style: none;
+        margin-top: 3px;
+      }
+
+      ul.bullets li {
+        position: relative;
+        padding-left: 10px;
+        margin-top: 1.5px;
+      }
+
+      ul.bullets li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+      }
+
+      /* ---------- projects ---------- */
+      .project {
+        margin-top: 9px;
+        break-inside: avoid;
+      }
+
+      .project:first-of-type {
+        margin-top: 0;
+      }
+
+      .project-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 9px;
+      }
+
+      .project-name {
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+        font-size: 13pt;
+        color: var(--ink);
+      }
+
+      .project-tag {
+        font-size: 7.2pt;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .project-link {
+        font-size: 8.4pt;
+        color: var(--body);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 5px 0 4px;
+      }
+
+      .tags span {
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        padding: 1px 8px;
+        font-size: 7.6pt;
+      }
+
+      /* ---------- sidebar ---------- */
+      .aside .label {
+        color: #6a6157;
+      }
+
+      .aside-block {
+        margin-bottom: 13px;
+      }
+
+      .aside-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .aside-group {
+        margin-bottom: 6px;
+      }
+
+      .aside-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .aside-group b {
+        display: block;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .aside p + p {
+        margin-top: 8px;
+      }
+
+      .aside-list {
+        list-style: none;
+      }
+
+      .aside-list li {
+        border-bottom: 1px solid #c9bcac;
+        padding: 4px 0;
+      }
+
+      .aside-list li:last-child {
+        border-bottom: 0;
+      }
+
+      /* ---------- print ---------- */
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        html {
+          background: var(--paper);
+        }
+
+        .toolbar,
+        .hint {
+          display: none !important;
+        }
+
+        .page {
+          width: auto;
+          min-height: 0;
+          margin: 0;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button type="button" id="btn-no">Norsk</button>
+      <button type="button" id="btn-en">English</button>
+      <button type="button" id="btn-print">Lagre som PDF</button>
+    </div>
+
+    <p class="hint">
+      Velg språk, trykk «Lagre som PDF» (eller Ctrl + P). Sett Destinasjon til <b>Lagre som PDF</b>,
+      papirstørrelse <b>A4</b>, marger <b>Ingen</b>, og huk av for <b>Bakgrunnsgrafikk</b>. Lagre den
+      norske som <b>cv-no.pdf</b> og den engelske som <b>cv-en.pdf</b>.
+    </p>
+
+    <div class="page" id="page"></div>
+
+    <script>
+      var LINKS = {
+        email: 'sarasabir26@outlook.com',
+        phone: '+47 901 93 636',
+        phoneHref: 'tel:+4790193636',
+        site: 'sakh26.github.io',
+        siteHref: 'https://sakh26.github.io',
+        github: 'github.com/sakh26',
+        githubHref: 'https://github.com/sakh26',
+        linkedin: 'LinkedIn',
+        linkedinHref: 'https://www.linkedin.com/in/sara-khudadad-dev',
+      }
+
+      var TECH = [
+        ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'],
+        ['Spring Boot', 'React', 'Bootstrap'],
+        ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux', 'Claude Code'],
+      ]
+
+      var DATA = {
+        no: {
+          docTitle: 'CV Sara Khudadad',
+          eyebrow: 'Utvikler · Sykepleier',
+          labels: {
+            summary: 'Sammendrag',
+            education: 'Utdannelse',
+            projects: 'Prosjekter',
+            experience: 'Arbeidserfaring',
+            tech: 'Teknologi',
+            availability: 'Tilgjengelighet',
+            languages: 'Språk',
+            health: 'Bakgrunn fra helse',
+          },
+          summary:
+            'Datateknologistudent på tredjeåret med programmering som fordypning, og fullstack som retning. Fra før er jeg autorisert sykepleier, og tar med meg presisjon, ansvar og ro under press inn i utviklerrollen.',
+          education: [
+            { title: 'Bachelor i anvendt datateknologi', place: 'OsloMet · programmering', date: '2024 – 2027' },
+            { title: 'Bachelor i sykepleie', place: 'VID vitenskapelige høgskole', date: '2021 – 2024' },
+          ],
+          projects: [
+            {
+              name: 'Jeoparty',
+              tag: 'Hobbyprosjekt',
+              links: [
+                { text: 'github.com/sakh26/Jeoparty', href: 'https://github.com/sakh26/Jeoparty' },
+                { text: 'demo', href: 'https://sakh26.github.io/Jeoparty/' },
+              ],
+              tags: ['React', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
+              desc: 'Jeopardy-spill til min egen bursdag. Utvidet med egne spørsmålspakker i JSON, editor og automatisk poengberegning. Spotify-avspilling uten backend, løst med OAuth 2.0 PKCE.',
+            },
+            {
+              name: 'Porteføljenettside',
+              tag: null,
+              links: [
+                { text: 'github.com/sakh26/sakh26.github.io', href: 'https://github.com/sakh26/sakh26.github.io' },
+                { text: 'live', href: 'https://sakh26.github.io' },
+              ],
+              tags: ['React', 'Vite', 'GitHub Pages'],
+              desc: 'Interaktiv CV og portefølje. Alt innhold ligger i et eget språklag som holder norsk og engelsk i synk, med lyst/mørkt tema og nedlastbar CV.',
+            },
+            {
+              name: 'Bryllupsnettside',
+              tag: 'Under utvikling',
+              links: [],
+              tags: [],
+              desc: 'Fullstack-prosjekt for et reelt bryllup, med program og informasjon om stedet, påmelding via QR-kode og en adminside for bordplassering.',
+            },
+          ],
+          experience: [
+            {
+              role: 'Studentassistent, IT-servicedesk',
+              place: 'OsloMet',
+              date: 'Okt 2025 – nå',
+              bullets: [
+                'Bistår studenter og ansatte med IT-relaterte spørsmål og problemer',
+                'Hendelseshåndtering og veiledning i IT-systemer, med administratortilgang for oppsett og feilsøking',
+                'Oppsett, utlån og utlevering av PC og utstyr',
+              ],
+            },
+            {
+              role: 'Medisinsk rådgiver',
+              place: 'Vertikal Helse / If Helseforsikring',
+              date: 'Jun 2025 – nå',
+              bullets: ['Rådgir kunder og leverandører i helsetjenester, med krav til presisjon og dokumentasjon'],
+            },
+            {
+              role: 'Miljøarbeider',
+              place: 'Edvard Munch VGS, Oslo kommune',
+              date: 'Sep 2024 – Jun 2025',
+              bullets: ['Bidro til et trygt skolemiljø i samarbeid med lærere og rådgivere'],
+            },
+            {
+              role: 'Sykepleier og pleieassistent',
+              place: 'Kristiansand og Oslo',
+              date: 'Jan 2019 – Aug 2024',
+              bullets: ['Ansvarsvakt for et helt vaktlag: prioriterte oppgaver og tok beslutninger under press'],
+            },
+          ],
+          techLabels: ['Språk', 'Rammeverk', 'Verktøy'],
+          availability: ['Fullfører bachelor juni 2027', 'Åpen for deltidsjobb i IT allerede nå.'],
+          languages: ['Norsk — morsmål', 'Engelsk — flytende', 'Kurdisk — flytende'],
+          health: [
+            'Autorisert sykepleier med erfaring fra hjemmetjenesten og helseforsikring.',
+            'Har jobbet tett med digitale fagsystemer, dokumentasjon og brukerveiledning i en sektor med høye krav til kvalitet og nøyaktighet.',
+          ],
+        },
+
+        en: {
+          docTitle: 'CV Sara Khudadad',
+          eyebrow: 'Developer · Registered nurse',
+          labels: {
+            summary: 'Summary',
+            education: 'Education',
+            projects: 'Projects',
+            experience: 'Experience',
+            tech: 'Technologies',
+            availability: 'Availability',
+            languages: 'Languages',
+            health: 'Healthcare background',
+          },
+          summary:
+            'Third-year applied computer technology student specialising in programming, working towards full-stack development. I am also a registered nurse, and bring precision, accountability and a calm head under pressure into the developer role.',
+          education: [
+            { title: 'BSc Applied Computer Technology', place: 'OsloMet · programming', date: '2024 – 2027' },
+            { title: 'BSc Nursing', place: 'VID Specialized University', date: '2021 – 2024' },
+          ],
+          projects: [
+            {
+              name: 'Jeoparty',
+              tag: 'Side project',
+              links: [
+                { text: 'github.com/sakh26/Jeoparty', href: 'https://github.com/sakh26/Jeoparty' },
+                { text: 'demo', href: 'https://sakh26.github.io/Jeoparty/' },
+              ],
+              tags: ['React', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
+              desc: 'A Jeopardy game I built for my own birthday. Extended with custom question packs in JSON, an editor and automatic scoring. Spotify playback without a backend, solved with OAuth 2.0 PKCE.',
+            },
+            {
+              name: 'Portfolio website',
+              tag: null,
+              links: [
+                { text: 'github.com/sakh26/sakh26.github.io', href: 'https://github.com/sakh26/sakh26.github.io' },
+                { text: 'live', href: 'https://sakh26.github.io' },
+              ],
+              tags: ['React', 'Vite', 'GitHub Pages'],
+              desc: 'Interactive CV and portfolio. All content lives in a separate translation layer that keeps Norwegian and English in sync, with light/dark theme and a downloadable CV.',
+            },
+            {
+              name: 'Wedding website',
+              tag: 'In progress',
+              links: [],
+              tags: [],
+              desc: 'Full-stack project for a real wedding, with programme and venue information, RSVP via QR code and an admin page for seating arrangements.',
+            },
+          ],
+          experience: [
+            {
+              role: 'Student Assistant, IT Service Desk',
+              place: 'OsloMet',
+              date: 'Oct 2025 – present',
+              bullets: [
+                'Assist students and staff with IT-related questions and issues',
+                'Incident handling and guidance on IT systems, with administrator access for setup and troubleshooting',
+                'Setup, loan and handout of PCs and equipment',
+              ],
+            },
+            {
+              role: 'Medical Adviser',
+              place: 'Vertikal Helse / If Insurance',
+              date: 'Jun 2025 – present',
+              bullets: ['Advise customers and providers on health services, with strict demands on precision and documentation'],
+            },
+            {
+              role: 'Support Worker',
+              place: 'Edvard Munch VGS, City of Oslo',
+              date: 'Sep 2024 – Jun 2025',
+              bullets: ['Helped create a safe school environment, working with teachers and counsellors'],
+            },
+            {
+              role: 'Registered Nurse and Care Assistant',
+              place: 'Kristiansand and Oslo',
+              date: 'Jan 2019 – Aug 2024',
+              bullets: ['Shift lead for a full team: prioritised tasks and made decisions under pressure'],
+            },
+          ],
+          techLabels: ['Languages', 'Frameworks', 'Tools'],
+          availability: ['Graduating June 2027', 'Open to part-time IT work already now.'],
+          languages: ['Norwegian — native', 'English — fluent', 'Kurdish — fluent'],
+          health: [
+            'Registered nurse with experience from home care services and health insurance.',
+            'I have worked closely with clinical software, documentation and user guidance in a sector with high demands on quality and accuracy.',
+          ],
+        },
+      }
+
+      function esc(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      }
+
+      function link(href, text, cls) {
+        return (
+          '<a href="' + href + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + esc(text) + '</a>'
+        )
+      }
+
+      function render(lang) {
+        var t = DATA[lang]
+
+        var header =
+          '<div class="header">' +
+          '<img class="photo" src="../public/portrait.jpg" alt="Sara Khudadad" />' +
+          '<div>' +
+          '<div class="eyebrow">' + esc(t.eyebrow) + '</div>' +
+          '<h1 class="name">Sara Khudadad</h1>' +
+          '<div class="contact">' +
+          link('mailto:' + LINKS.email, LINKS.email) +
+          link(LINKS.phoneHref, LINKS.phone) +
+          '</div>' +
+          '<div class="contact" style="margin-top:2px">' +
+          link(LINKS.siteHref, LINKS.site) +
+          link(LINKS.githubHref, LINKS.github) +
+          link(LINKS.linkedinHref, LINKS.linkedin) +
+          '</div>' +
+          '</div></div><hr class="header-rule" />'
+
+        var summary =
+          '<section><div class="label">' + esc(t.labels.summary) + '</div>' +
+          '<p class="summary">' + esc(t.summary) + '</p></section>'
+
+        var education =
+          '<section><div class="label">' + esc(t.labels.education) + '</div><div>' +
+          t.education
+            .map(function (e) {
+              return (
+                '<div class="entry"><div class="entry-head">' +
+                '<div class="entry-title">' + esc(e.title) +
+                ' <span class="thin">· ' + esc(e.place) + '</span></div>' +
+                '<div class="entry-date">' + esc(e.date) + '</div></div></div>'
+              )
+            })
+            .join('') +
+          '</div></section>'
+
+        var projects =
+          '<section><div class="label">' + esc(t.labels.projects) + '</div><div>' +
+          t.projects
+            .map(function (p) {
+              var head =
+                '<div class="project-head"><span class="project-name">' + esc(p.name) + '</span>' +
+                (p.tag ? '<span class="project-tag">' + esc(p.tag) + '</span>' : '') +
+                p.links
+                  .map(function (l) {
+                    return link(l.href, l.text, 'project-link')
+                  })
+                  .join('') +
+                '</div>'
+              var tags = p.tags.length
+                ? '<div class="tags">' +
+                  p.tags
+                    .map(function (x) {
+                      return '<span>' + esc(x) + '</span>'
+                    })
+                    .join('') +
+                  '</div>'
+                : ''
+              return '<div class="project">' + head + tags + '<p>' + esc(p.desc) + '</p></div>'
+            })
+            .join('') +
+          '</div></section>'
+
+        var experience =
+          '<section><div class="label">' + esc(t.labels.experience) + '</div><div>' +
+          t.experience
+            .map(function (e) {
+              return (
+                '<div class="entry"><div class="entry-head">' +
+                '<div class="entry-title">' + esc(e.role) +
+                ' <span class="thin">· ' + esc(e.place) + '</span></div>' +
+                '<div class="entry-date">' + esc(e.date) + '</div></div>' +
+                '<ul class="bullets">' +
+                e.bullets
+                  .map(function (b) {
+                    return '<li>' + esc(b) + '</li>'
+                  })
+                  .join('') +
+                '</ul></div>'
+              )
+            })
+            .join('') +
+          '<div class="entry-close"></div></div></section>'
+
+        var aside =
+          '<div class="aside-block"><div class="label">' + esc(t.labels.tech) + '</div>' +
+          TECH.map(function (group, i) {
+            return (
+              '<div class="aside-group"><b>' + esc(t.techLabels[i]) + '</b>' +
+              esc(group.join(', ')) + '</div>'
+            )
+          }).join('') +
+          '</div>' +
+          '<div class="aside-block"><div class="label">' + esc(t.labels.availability) + '</div>' +
+          t.availability
+            .map(function (line) {
+              return '<div>' + esc(line) + '</div>'
+            })
+            .join('') +
+          '</div>' +
+          '<div class="aside-block"><div class="label">' + esc(t.labels.languages) + '</div>' +
+          '<ul class="aside-list">' +
+          t.languages
+            .map(function (l) {
+              return '<li>' + esc(l) + '</li>'
+            })
+            .join('') +
+          '</ul></div>' +
+          '<div class="aside-block"><div class="label">' + esc(t.labels.health) + '</div>' +
+          t.health
+            .map(function (p) {
+              return '<p>' + esc(p) + '</p>'
+            })
+            .join('') +
+          '</div>'
+
+        document.getElementById('page').innerHTML =
+          header +
+          '<div class="cols"><div class="main">' +
+          summary + education + projects + experience +
+          '</div><aside class="aside">' + aside + '</aside></div>'
+
+        document.documentElement.lang = lang === 'no' ? 'no' : 'en'
+        document.title = t.docTitle
+        document.getElementById('btn-no').setAttribute('aria-pressed', String(lang === 'no'))
+        document.getElementById('btn-en').setAttribute('aria-pressed', String(lang === 'en'))
+      }
+
+      document.getElementById('btn-no').addEventListener('click', function () {
+        render('no')
+      })
+      document.getElementById('btn-en').addEventListener('click', function () {
+        render('en')
+      })
+      document.getElementById('btn-print').addEventListener('click', function () {
+        window.print()
+      })
+
+      render(location.hash === '#en' ? 'en' : 'no')
+    </script>
+  </body>
+</html>
