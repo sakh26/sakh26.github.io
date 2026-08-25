@@ -100,7 +100,7 @@ export const translations = {
           current: true,
           bullets: [
             'Håndterer henvendelser fra studenter og ansatte, fra feilsøking til veiledning i IT-systemene',
-            'Administratortilgang i IT-systemene for oppsett og feilsøking',
+            'Administratortilgang i Azure og Intune for oppsett og feilsøking',
             'Oppsett, utlån og utlevering av PC og utstyr',
           ],
         },
@@ -258,7 +258,7 @@ export const translations = {
           current: true,
           bullets: [
             'Handles enquiries from students and staff, from troubleshooting to guidance on the IT systems',
-            'Administrator access to the IT systems for setup and troubleshooting',
+            'Administrator access in Azure and Intune for setup and troubleshooting',
             'Setup, loan and handout of PCs and equipment',
           ],
         },
