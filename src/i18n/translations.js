@@ -34,6 +34,7 @@ export const translations = {
         'Jeg studerer Anvendt Datateknologi ved OsloMet og jobber som studentassistent på IT-servicedesken, der jeg hjelper studenter og ansatte med alt fra feilsøking til utstyr.',
         'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
         'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Så langt har det blitt et spill til bursdagen min og en nettside til et bryllup.',
+        'Jeg gleder meg til å komme ut i arbeidslivet og få brukt det jeg har lært i praksis. Jeg vil bli bedre som utvikler, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
       ],
     },
     projects: {
@@ -192,6 +193,7 @@ export const translations = {
         'I study Applied Computer Technology at OsloMet and work as a student assistant at the IT service desk, helping students and staff with everything from troubleshooting to equipment.',
         'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
         "Alongside my studies and two jobs, I build my own projects in my spare time. So far that's a game for my own birthday and a website for a wedding.",
+        'I am looking forward to starting my career and putting what I have learned into practice. I want to get better as a developer, learn from the people I work with and gain experience from projects that people actually use. I am ready to take responsibility and see things through.',
       ],
     },
     projects: {
