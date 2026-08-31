@@ -2,13 +2,13 @@
   --ink: #3b2c23;      /* Espresso */
   --ink-60: #665847;   /* Muted Cocoa */
   --ink-40: #7b6247;   /* Almond */
-  --border: #b7a38b;   /* Sand */
-  --surface: #ddd1c3;  /* Beige */
-  --bg: #f4ede1;       /* Ivory */
+  --border: #c9b9a4;   /* Sand, two steps up from the espresso */
+  --surface: #ece5da;  /* Beige, one step up from the sand */
+  --bg: #f8f5f0;       /* Paper, the lightest step */
 
   /* Contact panel — stays a dark statement in both themes */
   --panel-bg: #3b2c23;
-  --panel-ink: #f4ede1;
+  --panel-ink: #f8f5f0;
   --panel-muted: #ba9f83;
   --panel-border: #6f5f4d;
 
