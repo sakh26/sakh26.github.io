@@ -230,6 +230,41 @@ section.reveal.is-visible {
 }
 
 /* ─── ABOUT ──────────────────────────────────────────── */
+/* Begge yrkene som to merker side om side. */
+.about-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.about-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem 0.5rem 0.55rem;
+  border: 0.5px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.about-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink-40);
+}
+.about-badge-icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  border-radius: 50%;
+  background: var(--bg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-badge:hover {
+    transform: none;
+  }
+}
 .about-body {
   display: flex;
   flex-direction: column;
@@ -375,6 +410,63 @@ section.reveal.is-visible {
   color: var(--ink-60);
   line-height: 1.6;
 }
+/* Fremdrift for prosjekter som ikke er ferdige: hva som er gjort og hva som pågår. */
+.proj-progress {
+  margin-bottom: 1.5rem;
+}
+.proj-progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.proj-progress-count {
+  font-size: 0.75rem;
+  color: var(--ink-60);
+}
+.proj-progress-bar {
+  height: 4px;
+  margin: 0.2rem 0 0.9rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+.proj-progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+}
+.proj-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.proj-progress-list li {
+  display: grid;
+  grid-template-columns: 0.75rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--ink-60);
+}
+.proj-progress-list li.is-done {
+  color: var(--ink);
+}
+.proj-progress-mark {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.is-now .proj-progress-mark {
+  background: transparent;
+  border: 1.5px solid var(--ink-40);
+}
+.proj-progress-state {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--ink-60);
+}
+
 .proj-link {
   font-size: 0.78rem;
   color: var(--ink-60);
@@ -496,6 +588,48 @@ section.reveal.is-visible {
   padding: 0.35rem 0;
   border-bottom: 0.5px solid var(--border);
 }
+.skills-icon-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-top: 1.75rem;
+}
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 0.75rem;
+}
+.skill-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.1rem 0.5rem 0.9rem;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.78rem;
+  color: var(--ink-60);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.skill-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--ink-40);
+}
+.skill-icon {
+  width: 40px;
+  height: 40px;
+}
+:root[data-theme='dark'] .skill-icon.is-mono {
+  filter: invert(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill-tile:hover {
+    transform: none;
+  }
+}
+
 /* ─── EXPERIENCE ─────────────────────────────────────── */
 .timeline {
   display: flex;

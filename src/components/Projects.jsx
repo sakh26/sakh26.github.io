@@ -31,6 +31,35 @@ export default function Projects() {
             <h3 className="proj-name">{project.name}</h3>
             <p className="proj-desc">{project.desc}</p>
 
+            {project.progress && (
+              <div className="proj-progress">
+                <div className="proj-progress-head">
+                  <h4 className="proj-why-label">{project.progressLabel}</h4>
+                  <span className="proj-progress-count">
+                    {project.progress.filter((step) => step.done).length} / {project.progress.length}
+                  </span>
+                </div>
+                <div className="proj-progress-bar" aria-hidden="true">
+                  <span
+                    style={{
+                      width: `${(project.progress.filter((step) => step.done).length / project.progress.length) * 100}%`,
+                    }}
+                  />
+                </div>
+                <ul className="proj-progress-list">
+                  {project.progress.map((step) => (
+                    <li key={step.label} className={step.done ? 'is-done' : 'is-now'}>
+                      <span className="proj-progress-mark" aria-hidden="true" />
+                      <span>{step.label}</span>
+                      <span className="proj-progress-state">
+                        {step.done ? t.projects.progressDone : t.projects.progressNow}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {project.why && (
               <div className="proj-why">
                 <h4 className="proj-why-label">{t.projects.whyLabel}</h4>

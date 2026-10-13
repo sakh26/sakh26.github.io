@@ -30,8 +30,11 @@ export const translations = {
     },
     about: {
       title: 'Om meg',
+      badges: [
+        { icon: 'health', label: 'Sykepleier' },
+        { icon: 'code', label: 'Utvikler' },
+      ],
       body: [
-        'Jeg studerer Anvendt Datateknologi ved OsloMet og jobber som studentassistent på IT-servicedesken, der jeg hjelper studenter og ansatte med alt fra feilsøking til utstyr.',
         'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
         'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Så langt har det blitt et spill til bursdagen min og en nettside til et bryllup.',
         'Jeg gleder meg til å komme ut i arbeidslivet og få brukt det jeg har lært i praksis. Jeg vil bli bedre som utvikler, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
@@ -44,6 +47,8 @@ export const translations = {
       liveLabel: 'Prøv den',
       videoLabel: 'Se demo · 56 sek',
       videoPlay: 'Spill av demovideo',
+      progressDone: 'Ferdig',
+      progressNow: 'Neste',
       items: [
         {
           index: '01',
@@ -61,7 +66,15 @@ export const translations = {
           index: '02',
           tag: 'Under utvikling',
           name: 'Bryllupsnettside',
-          desc: 'Nettside til et bryllup: program for dagen, informasjon om stedet, påmelding for gjestene og en adminside med bordplassering.',
+          desc: 'Nettside til et bryllup.',
+          progressLabel: 'Status',
+          progress: [
+            { label: 'Påmelding for gjestene', done: true },
+            { label: 'Personlig QR-kode til hver gjest', done: true },
+            { label: 'Adminside for gjesteliste og bordplassering', done: true },
+            { label: 'Program for dagen', done: false },
+            { label: 'Bildeopplasting for gjestene', done: false },
+          ],
           tech: [],
           repo: null,
           live: null,
@@ -71,9 +84,9 @@ export const translations = {
     skills: {
       title: 'Ferdigheter',
       groups: [
-        { label: 'Språk', items: ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'] },
+        { label: 'Språk', items: ['Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'React', 'Bootstrap'] },
-        { label: 'Verktøy & systemer', items: ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
+        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
       ],
     },
     education: {
@@ -147,9 +160,9 @@ export const translations = {
       ],
     },
     contact: {
-      eyebrow: 'Ta kontakt',
-      title: 'Kontakt meg',
-      desc: 'Ferdig utdannet sommeren 2027, og søker fulltidsstilling med oppstart derfra. Ta gjerne kontakt.',
+      eyebrow: 'Kontakt',
+      title: 'Hei!',
+      desc: 'Jeg blir ferdig utdannet sommeren 2027 og gleder meg til å begynne å jobbe som utvikler. Ta gjerne kontakt.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
@@ -189,8 +202,11 @@ export const translations = {
     },
     about: {
       title: 'About',
+      badges: [
+        { icon: 'health', label: 'Nurse' },
+        { icon: 'code', label: 'Developer' },
+      ],
       body: [
-        'I study Applied Computer Technology at OsloMet and work as a student assistant at the IT service desk, helping students and staff with everything from troubleshooting to equipment.',
         'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
         "Alongside my studies and two jobs, I build my own projects in my spare time. So far that's a game for my own birthday and a website for a wedding.",
         'I am looking forward to starting my career and putting what I have learned into practice. I want to get better as a developer, learn from the people I work with and gain experience from projects that people actually use. I am ready to take responsibility and see things through.',
@@ -203,6 +219,8 @@ export const translations = {
       liveLabel: 'Try it',
       videoLabel: 'Watch demo · 56 sec',
       videoPlay: 'Play demo video',
+      progressDone: 'Done',
+      progressNow: 'Next',
       items: [
         {
           index: '01',
@@ -220,7 +238,15 @@ export const translations = {
           index: '02',
           tag: 'In progress',
           name: 'Wedding website',
-          desc: 'A website for a wedding: the programme for the day, venue details, guest RSVP and an admin page for table seating.',
+          desc: 'A website for a wedding.',
+          progressLabel: 'Status',
+          progress: [
+            { label: 'Guest RSVP', done: true },
+            { label: 'Personal QR code for each guest', done: true },
+            { label: 'Admin page for guest list and table seating', done: true },
+            { label: 'Programme for the day', done: false },
+            { label: 'Photo upload for guests', done: false },
+          ],
           tech: [],
           repo: null,
           live: null,
@@ -230,9 +256,9 @@ export const translations = {
     skills: {
       title: 'Skills',
       groups: [
-        { label: 'Languages', items: ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'] },
+        { label: 'Languages', items: ['Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Frameworks & libraries', items: ['Spring Boot', 'React', 'Bootstrap'] },
-        { label: 'Tools & systems', items: ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
+        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
       ],
     },
     education: {
@@ -306,9 +332,9 @@ export const translations = {
       ],
     },
     contact: {
-      eyebrow: 'Get in touch',
-      title: 'Contact me',
-      desc: 'Graduating summer 2027 and looking for a full-time position starting from then. Feel free to reach out.',
+      eyebrow: 'Contact',
+      title: 'Hi!',
+      desc: 'I graduate in summer 2027 and I’m looking forward to starting work as a developer. Feel free to get in touch.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
