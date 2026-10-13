@@ -85,7 +85,8 @@ export const translations = {
       groups: [
         { label: 'Språk', items: ['Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'React', 'Bootstrap'] },
-        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
+        { label: 'Databaser & testing', items: ['PostgreSQL', 'Vitest', 'Testprinsipper (ISTQB)'] },
+        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
       ],
     },
     education: {
@@ -256,7 +257,8 @@ export const translations = {
       groups: [
         { label: 'Languages', items: ['Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Frameworks & libraries', items: ['Spring Boot', 'React', 'Bootstrap'] },
-        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux'] },
+        { label: 'Databases & testing', items: ['PostgreSQL', 'Vitest', 'Test principles (ISTQB)'] },
+        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
       ],
     },
     education: {

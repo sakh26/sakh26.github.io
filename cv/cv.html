@@ -3,20 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <title>CV Sara Khudadad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <style>
+      /* Static TTF files, not the Google Fonts CSS: Chrome embeds these as
+         ordinary fonts, so the text in the PDF stays machine-readable. */
+      @font-face {
+        font-family: Arimo;
+        src: url('fonts/Arimo-Regular.ttf') format('truetype');
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: Arimo;
+        src: url('fonts/Arimo-Bold.ttf') format('truetype');
+        font-weight: 700;
+      }
+
       :root {
-        --paper: #f7f5f1;
-        --sidebar: #ddd1c3;
-        --ink: #2e2b26;
-        --body: #5c574e;
-        --muted: #79726a;
-        --rule: #c7c0b5;
+        --paper: #f8f5f0;
+        --ink: #111111;
+        --body: #1f1f1f;
+        --muted: #555555;
+        --rule: #c9b9a4;
       }
 
       * {
@@ -30,9 +37,9 @@
       }
 
       body {
-        font-family: Inter, 'Segoe UI', Arial, sans-serif;
-        font-size: 9.1pt;
-        line-height: 1.42;
+        font-family: Arimo, Helvetica, Arial, sans-serif;
+        font-size: 9pt;
+        line-height: 1.35;
         color: var(--body);
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -40,6 +47,9 @@
 
       a {
         color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 0.5px;
+        text-underline-offset: 2px;
       }
 
       /* ---------- toolbar (screen only) ---------- */
@@ -55,7 +65,7 @@
 
       .toolbar button {
         font: inherit;
-        font-family: Inter, 'Segoe UI', Arial, sans-serif;
+        font-family: Arimo, Helvetica, Arial, sans-serif;
         padding: 7px 14px;
         border: 1px solid #4a4640;
         border-radius: 999px;
@@ -86,7 +96,7 @@
         width: 210mm;
         min-height: 297mm;
         margin: 18px auto;
-        padding: 13mm 12mm 10mm;
+        padding: 10mm 13mm 6mm;
         background: var(--paper);
         box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
       }
@@ -96,29 +106,28 @@
         display: flex;
         gap: 13px;
         align-items: flex-start;
-        padding-bottom: 9px;
+        padding-bottom: 5mm;
       }
 
       .photo {
-        width: 27mm;
-        height: 32mm;
+        width: 24mm;
+        height: 28.5mm;
         flex: none;
         object-fit: cover;
         border-radius: 3px;
       }
 
       .eyebrow {
-        font-size: 7.4pt;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--muted);
+        font-size: 9pt;
+        color: var(--body);
         padding-top: 4px;
       }
 
       .name {
-        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-        font-size: 30pt;
-        font-weight: 400;
+        font-family: Arimo, Helvetica, Arial, sans-serif;
+        font-size: 26pt;
+        font-weight: 700;
+        letter-spacing: -0.01em;
         line-height: 1.08;
         color: var(--ink);
         margin: 4px 0 7px;
@@ -128,68 +137,30 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4px 13px;
-        font-size: 8.6pt;
-      }
-
-      .contact a {
-        text-decoration: none;
-      }
-
-      .header-rule {
-        border: 0;
-        border-top: 1px solid var(--rule);
-        margin-bottom: 11px;
-      }
-
-      /* ---------- columns ---------- */
-      .cols {
-        display: flex;
-        gap: 9mm;
-        align-items: flex-start;
-      }
-
-      .main {
-        flex: 1 1 auto;
-        min-width: 0;
-      }
-
-      .aside {
-        flex: 0 0 52mm;
-        background: var(--sidebar);
-        border-radius: 5px;
-        padding: 7mm 6mm;
+        font-size: 9pt;
       }
 
       /* ---------- sections ---------- */
       .label {
-        font-size: 7.4pt;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 5px;
+        font-size: 10.5pt;
+        font-weight: 700;
+        color: var(--ink);
+        padding-bottom: 2px;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 4px;
       }
 
       .main section {
-        margin-bottom: 11px;
-      }
-
-      .main section > .label + * {
-        border-top: 1px solid var(--rule);
-        padding-top: 7px;
+        margin-bottom: 14px;
       }
 
       .summary {
-        font-size: 9.1pt;
+        font-size: 9pt;
       }
 
       .entry {
-        border-top: 1px solid var(--rule);
-        padding: 7px 0;
+        padding: 2px 0 3px;
         break-inside: avoid;
-      }
-
-      .entry-close {
-        border-top: 1px solid var(--rule);
       }
 
       .entry-head {
@@ -201,7 +172,7 @@
 
       .entry-title {
         color: var(--ink);
-        font-weight: 600;
+        font-weight: 700;
       }
 
       .entry-title .thin {
@@ -211,30 +182,25 @@
 
       .entry-date {
         flex: none;
-        font-size: 8.6pt;
+        font-size: 9pt;
         color: var(--body);
       }
 
+      /* Plain list bullets rather than positioned ones: positioned content is
+         painted last, so PDF readers met the bullet text out of order. */
       ul.bullets {
-        list-style: none;
+        list-style: disc outside;
         margin-top: 3px;
+        padding-left: 12px;
       }
 
       ul.bullets li {
-        position: relative;
-        padding-left: 10px;
         margin-top: 1.5px;
-      }
-
-      ul.bullets li::before {
-        content: '•';
-        position: absolute;
-        left: 0;
       }
 
       /* ---------- projects ---------- */
       .project {
-        margin-top: 9px;
+        margin-top: 6px;
         break-inside: avoid;
       }
 
@@ -244,87 +210,41 @@
 
       .project-head {
         display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      .project-title {
+        display: flex;
         flex-wrap: wrap;
         align-items: baseline;
         gap: 9px;
       }
 
       .project-name {
-        font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-        font-size: 13pt;
+        font-family: Arimo, Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        font-weight: 700;
         color: var(--ink);
       }
 
       .project-tag {
-        font-size: 7.2pt;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        color: var(--muted);
+        font-size: 9pt;
+        color: var(--body);
       }
 
       .project-link {
-        font-size: 8.4pt;
+        font-size: 9pt;
         color: var(--body);
-        text-decoration: underline;
-        text-underline-offset: 2px;
       }
 
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        margin: 5px 0 4px;
+      .line + .line {
+        margin-top: 1px;
       }
 
-      .tags span {
-        border: 1px solid var(--rule);
-        border-radius: 999px;
-        padding: 1px 8px;
-        font-size: 7.6pt;
-      }
-
-      /* ---------- sidebar ---------- */
-      .aside .label {
-        color: #6a6157;
-      }
-
-      .aside-block {
-        margin-bottom: 13px;
-      }
-
-      .aside-block:last-child {
-        margin-bottom: 0;
-      }
-
-      .aside-group {
-        margin-bottom: 6px;
-      }
-
-      .aside-group:last-child {
-        margin-bottom: 0;
-      }
-
-      .aside-group b {
-        display: block;
+      .line b {
         color: var(--ink);
-        font-weight: 600;
-      }
-
-      .aside p + p {
-        margin-top: 8px;
-      }
-
-      .aside-list {
-        list-style: none;
-      }
-
-      .aside-list li {
-        border-bottom: 1px solid #c9bcac;
-        padding: 4px 0;
-      }
-
-      .aside-list li:last-child {
-        border-bottom: 0;
       }
 
       /* ---------- print ---------- */
@@ -383,12 +303,6 @@
         linkedinHref: 'https://www.linkedin.com/in/sara-khudadad-dev',
       }
 
-      var TECH = [
-        ['Java', 'JavaScript / TypeScript', 'SQL', 'HTML / CSS'],
-        ['Spring Boot', 'React', 'Bootstrap'],
-        ['Git / GitHub', 'GitHub Actions', 'Vite', 'Vitest', 'Linux', 'Claude Code'],
-      ]
-
       var DATA = {
         no: {
           docTitle: 'CV Sara Khudadad',
@@ -399,12 +313,11 @@
             projects: 'Prosjekter',
             experience: 'Arbeidserfaring',
             tech: 'Teknologi',
-            availability: 'Tilgjengelighet',
             languages: 'Språk',
             health: 'Bakgrunn fra helse',
           },
           summary:
-            'Datateknologistudent på tredjeåret med programmering som fordypning, og fullstack som retning. Fra før er jeg autorisert sykepleier, og tar med meg presisjon, ansvar og ro under press inn i utviklerrollen.',
+            'Datateknologistudent på tredjeåret med programmering som fordypning, og fullstack som retning. Jeg er nysgjerrig av natur, liker å forstå hvordan ting henger sammen, og gleder meg til å komme ut i arbeidslivet.',
           education: [
             { title: 'Bachelor i anvendt datateknologi', place: 'OsloMet · programmering', date: '2024 – 2027' },
             { title: 'Bachelor i sykepleie', place: 'VID vitenskapelige høgskole', date: '2021 – 2024' },
@@ -417,7 +330,6 @@
                 { text: 'github.com/sakh26/Jeoparty', href: 'https://github.com/sakh26/Jeoparty' },
                 { text: 'demo', href: 'https://sakh26.github.io/Jeoparty/' },
               ],
-              tags: ['React', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
               desc: 'Jeopardy-spill til min egen bursdag. Utvidet med egne spørsmålspakker i JSON, editor og automatisk poengberegning. Spotify-avspilling uten backend, løst med OAuth 2.0 PKCE.',
             },
             {
@@ -425,16 +337,13 @@
               tag: null,
               links: [
                 { text: 'github.com/sakh26/sakh26.github.io', href: 'https://github.com/sakh26/sakh26.github.io' },
-                { text: 'live', href: 'https://sakh26.github.io' },
               ],
-              tags: ['React', 'Vite', 'GitHub Pages'],
               desc: 'Interaktiv CV og portefølje. Alt innhold ligger i et eget språklag som holder norsk og engelsk i synk, med lyst/mørkt tema og nedlastbar CV.',
             },
             {
               name: 'Bryllupsnettside',
               tag: 'Under utvikling',
               links: [],
-              tags: [],
               desc: 'Fullstack-prosjekt for et reelt bryllup, med program og informasjon om stedet, påmelding via QR-kode og en adminside for bordplassering.',
             },
           ],
@@ -468,9 +377,14 @@
               bullets: ['Ansvarsvakt for et helt vaktlag: prioriterte oppgaver og tok beslutninger under press'],
             },
           ],
-          techLabels: ['Språk', 'Rammeverk', 'Verktøy'],
-          availability: ['Fullfører bachelor juni 2027', 'Åpen for deltidsjobb i IT allerede nå.'],
-          languages: ['Norsk — morsmål', 'Engelsk — flytende', 'Kurdisk — flytende'],
+          tech: [
+            ['Språk', 'Java, JavaScript / TypeScript, SQL, HTML / CSS'],
+            ['Rammeverk', 'Spring Boot, React, Bootstrap'],
+            ['Databaser og testing', 'PostgreSQL, Vitest, testprinsipper (ISTQB)'],
+            ['Verktøy', 'Git / GitHub, GitHub Actions, Docker, Vite, Linux, Claude Code'],
+            ['Systemer', 'Microsoft Entra ID, Intune'],
+          ],
+          languages: ['Norsk (morsmål)', 'engelsk (flytende)', 'kurdisk (flytende)'],
           health: [
             'Autorisert sykepleier med erfaring fra hjemmetjenesten og helseforsikring.',
             'Har jobbet tett med digitale fagsystemer, dokumentasjon og brukerveiledning i en sektor med høye krav til kvalitet og nøyaktighet.',
@@ -486,12 +400,11 @@
             projects: 'Projects',
             experience: 'Experience',
             tech: 'Technologies',
-            availability: 'Availability',
             languages: 'Languages',
             health: 'Healthcare background',
           },
           summary:
-            'Third-year applied computer technology student specialising in programming, working towards full-stack development. I am also a registered nurse, and bring precision, accountability and a calm head under pressure into the developer role.',
+            'Third-year applied computer technology student specialising in programming, working towards full-stack development. I’m curious by nature, like to understand how things fit together, and I’m looking forward to starting my career.',
           education: [
             { title: 'BSc Applied Computer Technology', place: 'OsloMet · programming', date: '2024 – 2027' },
             { title: 'BSc Nursing', place: 'VID Specialized University', date: '2021 – 2024' },
@@ -504,7 +417,6 @@
                 { text: 'github.com/sakh26/Jeoparty', href: 'https://github.com/sakh26/Jeoparty' },
                 { text: 'demo', href: 'https://sakh26.github.io/Jeoparty/' },
               ],
-              tags: ['React', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
               desc: 'A Jeopardy game I built for my own birthday. Extended with custom question packs in JSON, an editor and automatic scoring. Spotify playback without a backend, solved with OAuth 2.0 PKCE.',
             },
             {
@@ -512,16 +424,13 @@
               tag: null,
               links: [
                 { text: 'github.com/sakh26/sakh26.github.io', href: 'https://github.com/sakh26/sakh26.github.io' },
-                { text: 'live', href: 'https://sakh26.github.io' },
               ],
-              tags: ['React', 'Vite', 'GitHub Pages'],
               desc: 'Interactive CV and portfolio. All content lives in a separate translation layer that keeps Norwegian and English in sync, with light/dark theme and a downloadable CV.',
             },
             {
               name: 'Wedding website',
               tag: 'In progress',
               links: [],
-              tags: [],
               desc: 'Full-stack project for a real wedding, with programme and venue information, RSVP via QR code and an admin page for seating arrangements.',
             },
           ],
@@ -555,9 +464,14 @@
               bullets: ['Shift lead for a full team: prioritised tasks and made decisions under pressure'],
             },
           ],
-          techLabels: ['Languages', 'Frameworks', 'Tools'],
-          availability: ['Graduating June 2027', 'Open to part-time IT work already now.'],
-          languages: ['Norwegian — native', 'English — fluent', 'Kurdish — fluent'],
+          tech: [
+            ['Languages', 'Java, JavaScript / TypeScript, SQL, HTML / CSS'],
+            ['Frameworks', 'Spring Boot, React, Bootstrap'],
+            ['Databases and testing', 'PostgreSQL, Vitest, test principles (ISTQB)'],
+            ['Tools', 'Git / GitHub, GitHub Actions, Docker, Vite, Linux, Claude Code'],
+            ['Systems', 'Microsoft Entra ID, Intune'],
+          ],
+          languages: ['Norwegian (native)', 'English (fluent)', 'Kurdish (fluent)'],
           health: [
             'Registered nurse with experience from home care services and health insurance.',
             'I have worked closely with clinical software, documentation and user guidance in a sector with high demands on quality and accuracy.',
@@ -593,7 +507,7 @@
           link(LINKS.githubHref, LINKS.github) +
           link(LINKS.linkedinHref, LINKS.linkedin) +
           '</div>' +
-          '</div></div><hr class="header-rule" />'
+          '</div></div>'
 
         var summary =
           '<section><div class="label">' + esc(t.labels.summary) + '</div>' +
@@ -618,24 +532,16 @@
           t.projects
             .map(function (p) {
               var head =
-                '<div class="project-head"><span class="project-name">' + esc(p.name) + '</span>' +
+                '<div class="project-head"><div class="project-title">' +
+                '<span class="project-name">' + esc(p.name) + '</span>' +
                 (p.tag ? '<span class="project-tag">' + esc(p.tag) + '</span>' : '') +
                 p.links
                   .map(function (l) {
                     return link(l.href, l.text, 'project-link')
                   })
                   .join('') +
-                '</div>'
-              var tags = p.tags.length
-                ? '<div class="tags">' +
-                  p.tags
-                    .map(function (x) {
-                      return '<span>' + esc(x) + '</span>'
-                    })
-                    .join('') +
-                  '</div>'
-                : ''
-              return '<div class="project">' + head + tags + '<p>' + esc(p.desc) + '</p></div>'
+                '</div></div>'
+              return '<div class="project">' + head + '<p>' + esc(p.desc) + '</p></div>'
             })
             .join('') +
           '</div></section>'
@@ -659,45 +565,28 @@
               )
             })
             .join('') +
-          '<div class="entry-close"></div></div></section>'
+          '</div></section>'
 
-        var aside =
-          '<div class="aside-block"><div class="label">' + esc(t.labels.tech) + '</div>' +
-          TECH.map(function (group, i) {
-            return (
-              '<div class="aside-group"><b>' + esc(t.techLabels[i]) + '</b>' +
-              esc(group.join(', ')) + '</div>'
-            )
+        var tech =
+          '<section><div class="label">' + esc(t.labels.tech) + '</div>' +
+          t.tech.map(function (row) {
+            return '<div class="line"><b>' + esc(row[0]) + ':</b> ' + esc(row[1]) + '</div>'
           }).join('') +
-          '</div>' +
-          '<div class="aside-block"><div class="label">' + esc(t.labels.availability) + '</div>' +
-          t.availability
-            .map(function (line) {
-              return '<div>' + esc(line) + '</div>'
-            })
-            .join('') +
-          '</div>' +
-          '<div class="aside-block"><div class="label">' + esc(t.labels.languages) + '</div>' +
-          '<ul class="aside-list">' +
-          t.languages
-            .map(function (l) {
-              return '<li>' + esc(l) + '</li>'
-            })
-            .join('') +
-          '</ul></div>' +
-          '<div class="aside-block"><div class="label">' + esc(t.labels.health) + '</div>' +
-          t.health
-            .map(function (p) {
-              return '<p>' + esc(p) + '</p>'
-            })
-            .join('') +
-          '</div>'
+          '</section>'
+
+        var languages =
+          '<section><div class="label">' + esc(t.labels.languages) + '</div>' +
+          '<div class="line">' + esc(t.languages.join(', ')) + '</div></section>'
+
+        var health =
+          '<section><div class="label">' + esc(t.labels.health) + '</div>' +
+          '<p class="line">' + esc(t.health.join(' ')) + '</p></section>'
 
         document.getElementById('page').innerHTML =
           header +
-          '<div class="cols"><div class="main">' +
-          summary + education + projects + experience +
-          '</div><aside class="aside">' + aside + '</aside></div>'
+          '<div class="main">' +
+          summary + education + projects + experience + tech + languages + health +
+          '</div>'
 
         document.documentElement.lang = lang === 'no' ? 'no' : 'en'
         document.title = t.docTitle

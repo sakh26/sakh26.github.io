@@ -14,6 +14,11 @@ import githubactions from '../assets/icons/githubactions.svg'
 import vitejs from '../assets/icons/vitejs.svg'
 import vitest from '../assets/icons/vitest.svg'
 import linux from '../assets/icons/linux.svg'
+import docker from '../assets/icons/docker.svg'
+import postgresql from '../assets/icons/postgresql.svg'
+import testing from '../assets/icons/testing.svg'
+import entra from '../assets/icons/entra.svg'
+import intune from '../assets/icons/intune.svg'
 
 // Ikonene er de samme på begge språk, så de slås opp på navnet.
 // Svarte ikoner er merket mono, slik at de kan lysne i mørkt tema.
@@ -33,6 +38,12 @@ const icons = {
   Vite: { src: vitejs },
   Vitest: { src: vitest },
   Linux: { src: linux, mono: true },
+  Docker: { src: docker },
+  PostgreSQL: { src: postgresql },
+  'Testprinsipper (ISTQB)': { src: testing, mono: true },
+  'Test principles (ISTQB)': { src: testing, mono: true },
+  'Microsoft Entra ID': { src: entra, mono: true },
+  Intune: { src: intune, mono: true },
 }
 
 export default function Skills() {
