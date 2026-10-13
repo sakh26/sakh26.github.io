@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <section className="projects" id="prosjekter">
       <div className="section-header">
-        <h2 className="section-title">{t.projects.title}</h2>
+        <h2 className="section-title title-underline">{t.projects.title}</h2>
         <a
           href="https://github.com/sakh26"
           className="section-link"

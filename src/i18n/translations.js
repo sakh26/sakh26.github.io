@@ -35,9 +35,8 @@ export const translations = {
         { icon: 'code', label: 'Utvikler' },
       ],
       body: [
-        'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvar og en vane med å samarbeide på tvers av fagfelt.',
-        'Ved siden av studiet og to jobber bygger jeg egne prosjekter på fritiden. Så langt har det blitt et spill til bursdagen min og en nettside til et bryllup.',
-        'Jeg gleder meg til å komme ut i arbeidslivet og få brukt det jeg har lært i praksis. Jeg vil bli bedre som utvikler, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
+        'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvarsfølelse og erfaring med å samarbeide på tvers av fagfelt.',
+        'Jeg er nysgjerrig av natur og liker å forstå hvordan ting henger sammen. Nå gleder jeg meg til å komme ut i arbeidslivet, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
       ],
     },
     projects: {
@@ -207,9 +206,8 @@ export const translations = {
         { icon: 'code', label: 'Developer' },
       ],
       body: [
-        'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and a knack for collaborating across fields.',
-        "Alongside my studies and two jobs, I build my own projects in my spare time. So far that's a game for my own birthday and a website for a wedding.",
-        'I am looking forward to starting my career and putting what I have learned into practice. I want to get better as a developer, learn from the people I work with and gain experience from projects that people actually use. I am ready to take responsibility and see things through.',
+        'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and experience collaborating across fields.',
+        "I'm curious by nature and like to understand how things fit together. Now I'm looking forward to starting my career, learning from the people I work with and gaining experience from projects that people actually use. I'm ready to take responsibility and see things through.",
       ],
     },
     projects: {

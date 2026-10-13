@@ -293,6 +293,26 @@ section.reveal.is-visible {
   font-weight: 400;
   letter-spacing: -0.01em;
 }
+/* A thin line that draws itself under the title when the section scrolls in. */
+.title-underline {
+  position: relative;
+  display: inline-block;
+}
+.title-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.2rem;
+  height: 1px;
+  background: var(--ink-40);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s ease 0.4s;
+}
+.is-visible .title-underline::after {
+  transform: scaleX(1);
+}
 .section-link {
   font-size: 0.75rem;
   color: var(--ink-40);
