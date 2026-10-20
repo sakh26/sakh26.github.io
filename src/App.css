@@ -384,7 +384,9 @@ section.reveal.is-visible {
   color: var(--ink);
 }
 .tag-skole,
-.tag-school {
+.tag-skoleprosjekt,
+.tag-school,
+.tag-school-project {
   background: rgba(170, 140, 107, 0.28);
   color: var(--ink);
 }

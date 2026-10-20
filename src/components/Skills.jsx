@@ -1,11 +1,13 @@
 import { useLanguage } from '../i18n/LanguageContext'
 import java from '../assets/icons/java.svg'
+import csharp from '../assets/icons/csharp.svg'
 import javascript from '../assets/icons/javascript.svg'
 import typescript from '../assets/icons/typescript.svg'
 import sql from '../assets/icons/sql.svg'
 import html5 from '../assets/icons/html5.svg'
 import css3 from '../assets/icons/css3.svg'
 import spring from '../assets/icons/spring.svg'
+import dotnet from '../assets/icons/dotnet.svg'
 import react from '../assets/icons/react.svg'
 import bootstrap from '../assets/icons/bootstrap.svg'
 import git from '../assets/icons/git.svg'
@@ -16,6 +18,7 @@ import vitest from '../assets/icons/vitest.svg'
 import linux from '../assets/icons/linux.svg'
 import docker from '../assets/icons/docker.svg'
 import postgresql from '../assets/icons/postgresql.svg'
+import sqlite from '../assets/icons/sqlite.svg'
 import testing from '../assets/icons/testing.svg'
 import entra from '../assets/icons/entra.svg'
 import intune from '../assets/icons/intune.svg'
@@ -24,12 +27,14 @@ import intune from '../assets/icons/intune.svg'
 // Svarte ikoner er merket mono, slik at de kan lysne i mørkt tema.
 const icons = {
   Java: { src: java },
+  'C#': { src: csharp },
   JavaScript: { src: javascript },
   TypeScript: { src: typescript },
   SQL: { src: sql, mono: true },
   HTML: { src: html5 },
   CSS: { src: css3 },
   'Spring Boot': { src: spring },
+  'ASP.NET Core': { src: dotnet },
   React: { src: react },
   Bootstrap: { src: bootstrap },
   Git: { src: git },
@@ -40,6 +45,7 @@ const icons = {
   Linux: { src: linux, mono: true },
   Docker: { src: docker },
   PostgreSQL: { src: postgresql },
+  SQLite: { src: sqlite },
   'Testprinsipper (ISTQB)': { src: testing, mono: true },
   'Test principles (ISTQB)': { src: testing, mono: true },
   'Microsoft Entra ID': { src: entra, mono: true },
