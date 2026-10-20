@@ -38,8 +38,8 @@
 
       body {
         font-family: Arimo, Helvetica, Arial, sans-serif;
-        font-size: 9pt;
-        line-height: 1.35;
+        font-size: 9.5pt;
+        line-height: 1.36;
         color: var(--body);
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -96,7 +96,7 @@
         width: 210mm;
         min-height: 297mm;
         margin: 18px auto;
-        padding: 10mm 13mm 6mm;
+        padding: 10mm 15mm 6mm;
         background: var(--paper);
         box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
       }
@@ -106,19 +106,19 @@
         display: flex;
         gap: 13px;
         align-items: flex-start;
-        padding-bottom: 5mm;
+        padding-bottom: 5.5mm;
       }
 
       .photo {
-        width: 24mm;
-        height: 28.5mm;
+        width: 25mm;
+        height: 29.7mm;
         flex: none;
         object-fit: cover;
         border-radius: 3px;
       }
 
       .eyebrow {
-        font-size: 9pt;
+        font-size: 9.5pt;
         color: var(--body);
         padding-top: 4px;
       }
@@ -137,76 +137,53 @@
         display: flex;
         flex-wrap: wrap;
         gap: 4px 13px;
-        font-size: 9pt;
+        font-size: 9.5pt;
       }
 
-      /* ---------- sections ---------- */
+      /* ---------- sections ----------
+         One rhythm for the whole page: the same gap between sections, the
+         same gap between items inside a section, the same line height. */
+      :root {
+        --section-gap: 5.2mm;
+        --item-gap: 2mm;
+      }
+
+      .main section + section {
+        margin-top: var(--section-gap);
+      }
+
       .label {
-        font-size: 10.5pt;
+        font-size: 11pt;
         font-weight: 700;
         color: var(--ink);
-        padding-bottom: 3px;
+        padding-bottom: 1.2mm;
         border-bottom: 1px solid var(--rule);
-        margin-bottom: 7px;
+        margin-bottom: 2mm;
       }
 
-      .main section {
-        margin-bottom: 18px;
-      }
-
-      .summary {
-        font-size: 9pt;
-      }
-
-      .entry {
-        padding: 3px 0 4px;
+      .entry,
+      .project {
         break-inside: avoid;
       }
 
-      .entry-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 10px;
+      .entry + .entry,
+      .project + .project {
+        margin-top: var(--item-gap);
       }
 
-      .entry-title {
-        color: var(--ink);
+      .entry-title,
+      .project-name {
+        font-size: 9.5pt;
         font-weight: 700;
+        color: var(--ink);
       }
 
-      .entry-title .thin {
+      .entry-title .thin,
+      .project-tag,
+      .project-link {
+        font-size: 9.5pt;
         font-weight: 400;
         color: var(--body);
-      }
-
-      /* Plain list bullets rather than positioned ones: positioned content is
-         painted last, so PDF readers met the bullet text out of order. */
-      ul.bullets {
-        list-style: disc outside;
-        margin-top: 3px;
-        padding-left: 12px;
-      }
-
-      ul.bullets li {
-        margin-top: 1.5px;
-      }
-
-      /* ---------- projects ---------- */
-      .project {
-        margin-top: 9px;
-        break-inside: avoid;
-      }
-
-      .project:first-of-type {
-        margin-top: 0;
-      }
-
-      .project-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 10px;
       }
 
       .project-title {
@@ -216,25 +193,24 @@
         gap: 9px;
       }
 
-      .project-name {
-        font-family: Arimo, Helvetica, Arial, sans-serif;
-        font-size: 10pt;
-        font-weight: 700;
-        color: var(--ink);
+      .project p {
+        margin-top: 0.8mm;
       }
 
-      .project-tag {
-        font-size: 9pt;
-        color: var(--body);
+      /* Plain list bullets rather than positioned ones: positioned content is
+         painted last, so PDF readers met the bullet text out of order. */
+      ul.bullets {
+        list-style: disc outside;
+        margin-top: 0.8mm;
+        padding-left: 13px;
       }
 
-      .project-link {
-        font-size: 9pt;
-        color: var(--body);
+      ul.bullets li + li {
+        margin-top: 0.6mm;
       }
 
       .line + .line {
-        margin-top: 1px;
+        margin-top: 0.8mm;
       }
 
       .line b {
@@ -310,7 +286,7 @@
             languages: 'Språk',
           },
           summary:
-            'Datateknologistudent ved OsloMet med programmering som fordypning, ferdig juni 2027. Jeg vil jobbe med backend og fullstack. Jeg er også autorisert sykepleier og har flere år fra helsevesenet, blant annet som ansvarsvakt for et helt vaktlag. Der brukte jeg fagsystemer hver dag og så hvor mye det betyr at et system passer arbeidshverdagen. Ved siden av studiene jobber jeg på IT-servicedesken ved OsloMet og som medisinsk rådgiver.',
+            'Datateknologistudent ved OsloMet, ferdig juni 2027, med bachelorgrad i sykepleie. Kombinasjonen av teknologi og helse gir meg et tverrfaglig perspektiv, og jeg gleder meg til å starte karrieren som utvikler.',
           education: [
             { title: 'Bachelor i anvendt datateknologi', place: 'OsloMet · programmering', date: '2024 – 2027' },
             { title: 'Bachelor i sykepleie', place: 'VID vitenskapelige høgskole', date: '2021 – 2024' },
@@ -398,7 +374,7 @@
             languages: 'Languages',
           },
           summary:
-            'Applied computer technology student at OsloMet, specialising in programming, graduating June 2027. I want to work with backend and full-stack development. I am also a registered nurse with several years in healthcare, including shifts as lead for a full team. There I used clinical systems every day and saw how much it matters that a system fits the work. Alongside my studies I work at the OsloMet IT service desk and as a medical adviser.',
+            'Applied computer technology student at OsloMet, graduating June 2027, with a bachelor’s degree in nursing. The combination of technology and health gives me an interdisciplinary perspective, and I look forward to starting my career as a developer.',
           education: [
             { title: 'BSc Applied Computer Technology', place: 'OsloMet · programming', date: '2024 – 2027' },
             { title: 'BSc Nursing', place: 'VID Specialized University', date: '2021 – 2024' },
