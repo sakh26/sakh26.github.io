@@ -101,8 +101,8 @@ export const translations = {
     skills: {
       title: 'Ferdigheter',
       groups: [
-        { label: 'Språk', items: ['Java', 'C#', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
-        { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'ASP.NET Core', 'React', 'Bootstrap'] },
+        { label: 'Språk', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
+        { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databaser & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Testprinsipper (ISTQB)'] },
         { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
       ],
@@ -291,8 +291,8 @@ export const translations = {
     skills: {
       title: 'Skills',
       groups: [
-        { label: 'Languages', items: ['Java', 'C#', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
-        { label: 'Frameworks & libraries', items: ['Spring Boot', 'ASP.NET Core', 'React', 'Bootstrap'] },
+        { label: 'Languages', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
+        { label: 'Frameworks & libraries', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databases & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Test principles (ISTQB)'] },
         { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
       ],
