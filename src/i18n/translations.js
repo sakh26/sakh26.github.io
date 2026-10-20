@@ -21,7 +21,7 @@ export const translations = {
       eyebrow: 'Utvikler · Oslo',
       title: ['Sara', 'Khudadad'],
       credentials: [
-        { main: 'Bachelorstudent i Anvendt Datateknologi', detail: 'OsloMet · retning programmering · ferdig juni 2027' },
+        { main: 'Bachelorstudent i Anvendt Datateknologi', detail: 'OsloMet · retning programmering · ferdig sommeren 2027' },
         { main: 'Autorisert sykepleier', detail: null },
       ],
       ctaProjects: 'Se prosjekter',
@@ -35,9 +35,8 @@ export const translations = {
         { icon: 'code', label: 'Utvikler' },
       ],
       body: [
-        'Jeg studerer anvendt datateknologi på OsloMet med programmering som fordypning, og blir ferdig i juni 2027. Jeg vil jobbe med backend og fullstack. Mest erfaring har jeg med Java og React, og i høst bygger jeg i C# og ASP.NET Core.',
-        'Før det tok jeg bachelor i sykepleie og jobbet flere år i helsevesenet. Der brukte jeg fagsystemer hver dag og så hvor mye det betyr at et system passer arbeidshverdagen. Det var en del av grunnen til at jeg begynte å programmere. Fra helse har jeg med meg vanen med å jobbe nøyaktig under tidspress.',
-        'Ved siden av studiene jobber jeg på IT-servicedesken ved OsloMet. Der hjelper jeg studenter og ansatte hver dag og har administratortilgang i Microsoft Entra ID og Intune.',
+        'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvarsfølelse og erfaring med å samarbeide på tvers av fagfelt.',
+        'Jeg er nysgjerrig av natur og liker å forstå hvordan ting henger sammen. Nå gleder jeg meg til å komme ut i arbeidslivet, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
       ],
     },
     projects: {
@@ -84,7 +83,7 @@ export const translations = {
           index: '03',
           tag: 'Under utvikling',
           name: 'Bryllupsnettside',
-          desc: 'Fullstack-nettside til et ekte bryllup. Gjestene melder seg på med en personlig QR-kode, og brudeparet styrer gjestelisten og bordplasseringen fra en egen adminside.',
+          desc: 'Nettside til et bryllup.',
           progressLabel: 'Status',
           progress: [
             { label: 'Påmelding for gjestene', done: true },
@@ -93,7 +92,7 @@ export const translations = {
             { label: 'Program for dagen', done: false },
             { label: 'Bildeopplasting for gjestene', done: false },
           ],
-          tech: ['Python', 'FastAPI', 'React', 'PostgreSQL'],
+          tech: [],
           repo: null,
           live: null,
         },
@@ -181,7 +180,7 @@ export const translations = {
     contact: {
       eyebrow: 'Kontakt',
       title: 'Hei!',
-      desc: 'Jeg blir ferdig i juni 2027 og er åpen for deltidsjobb i IT allerede nå. Ta gjerne kontakt.',
+      desc: 'Jeg blir ferdig utdannet sommeren 2027 og gleder meg til å begynne å jobbe som utvikler. Ta gjerne kontakt.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
@@ -212,7 +211,7 @@ export const translations = {
       eyebrow: 'Developer · Oslo',
       title: ['Sara', 'Khudadad'],
       credentials: [
-        { main: "Bachelor's student in Applied Computer Technology", detail: 'OsloMet · programming track · graduating June 2027' },
+        { main: "Bachelor's student in Applied Computer Technology", detail: 'OsloMet · programming track · graduating summer 2027' },
         { main: 'Licensed nurse', detail: null },
       ],
       ctaProjects: 'View projects',
@@ -226,9 +225,8 @@ export const translations = {
         { icon: 'code', label: 'Developer' },
       ],
       body: [
-        'I study applied computer technology at OsloMet, specialising in programming, and graduate in June 2027. I want to work with backend and full-stack development. Most of my experience is with Java and React, and this autumn I am building in C# and ASP.NET Core.',
-        'Before that I took a bachelor in nursing and worked several years in healthcare. I used clinical systems every day and saw how much it matters that a system fits the work. That was part of the reason I started programming. From healthcare I bring the habit of working accurately under time pressure.',
-        'Alongside my studies I work at the OsloMet IT service desk. I help students and staff every day and have administrator access in Microsoft Entra ID and Intune.',
+        'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and experience collaborating across fields.',
+        "I'm curious by nature and like to understand how things fit together. Now I'm looking forward to starting my career, learning from the people I work with and gaining experience from projects that people actually use. I'm ready to take responsibility and see things through.",
       ],
     },
     projects: {
@@ -275,7 +273,7 @@ export const translations = {
           index: '03',
           tag: 'In progress',
           name: 'Wedding website',
-          desc: 'A full-stack website for a real wedding. Guests RSVP with a personal QR code, and the couple manage the guest list and table seating from their own admin page.',
+          desc: 'A website for a wedding.',
           progressLabel: 'Status',
           progress: [
             { label: 'Guest RSVP', done: true },
@@ -284,7 +282,7 @@ export const translations = {
             { label: 'Programme for the day', done: false },
             { label: 'Photo upload for guests', done: false },
           ],
-          tech: ['Python', 'FastAPI', 'React', 'PostgreSQL'],
+          tech: [],
           repo: null,
           live: null,
         },
@@ -372,7 +370,7 @@ export const translations = {
     contact: {
       eyebrow: 'Contact',
       title: 'Hi!',
-      desc: 'I graduate in June 2027 and am open to a part-time IT job already now. Feel free to get in touch.',
+      desc: 'I graduate in summer 2027 and I’m looking forward to starting work as a developer. Feel free to get in touch.',
       email: 'sarasabir26@outlook.com',
       phone: '+47 901 93 636',
     },
