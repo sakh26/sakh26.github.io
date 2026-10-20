@@ -180,12 +180,6 @@
         color: var(--body);
       }
 
-      .entry-date {
-        flex: none;
-        font-size: 9pt;
-        color: var(--body);
-      }
-
       /* Plain list bullets rather than positioned ones: positioned content is
          painted last, so PDF readers met the bullet text out of order. */
       ul.bullets {
@@ -314,10 +308,9 @@
             experience: 'Arbeidserfaring',
             tech: 'Teknologi',
             languages: 'Språk',
-            health: 'Bakgrunn fra helse',
           },
           summary:
-            'Datateknologistudent på tredjeåret med programmering som fordypning, og fullstack som retning. Jeg er nysgjerrig av natur, liker å forstå hvordan ting henger sammen, og gleder meg til å komme ut i arbeidslivet.',
+            'Datateknologistudent ved OsloMet med programmering som fordypning, ferdig juni 2027. Jeg vil jobbe med backend og fullstack. Jeg er også autorisert sykepleier og har flere år fra helsevesenet, blant annet som ansvarsvakt for et helt vaktlag. Der brukte jeg fagsystemer hver dag og så hvor mye det betyr at et system passer arbeidshverdagen. Ved siden av studiene jobber jeg på IT-servicedesken ved OsloMet og som medisinsk rådgiver.',
           education: [
             { title: 'Bachelor i anvendt datateknologi', place: 'OsloMet · programmering', date: '2024 – 2027' },
             { title: 'Bachelor i sykepleie', place: 'VID vitenskapelige høgskole', date: '2021 – 2024' },
@@ -391,10 +384,6 @@
             ['Systemer', 'Microsoft Entra ID, Intune'],
           ],
           languages: ['Norsk (morsmål)', 'engelsk (flytende)', 'kurdisk (flytende)'],
-          health: [
-            'Autorisert sykepleier med erfaring fra hjemmetjenesten og helseforsikring.',
-            'Har jobbet tett med digitale fagsystemer, dokumentasjon og brukerveiledning i en sektor med høye krav til kvalitet og nøyaktighet.',
-          ],
         },
 
         en: {
@@ -407,10 +396,9 @@
             experience: 'Experience',
             tech: 'Technologies',
             languages: 'Languages',
-            health: 'Healthcare background',
           },
           summary:
-            'Third-year applied computer technology student specialising in programming, working towards full-stack development. I’m curious by nature, like to understand how things fit together, and I’m looking forward to starting my career.',
+            'Applied computer technology student at OsloMet, specialising in programming, graduating June 2027. I want to work with backend and full-stack development. I am also a registered nurse with several years in healthcare, including shifts as lead for a full team. There I used clinical systems every day and saw how much it matters that a system fits the work. Alongside my studies I work at the OsloMet IT service desk and as a medical adviser.',
           education: [
             { title: 'BSc Applied Computer Technology', place: 'OsloMet · programming', date: '2024 – 2027' },
             { title: 'BSc Nursing', place: 'VID Specialized University', date: '2021 – 2024' },
@@ -484,10 +472,6 @@
             ['Systems', 'Microsoft Entra ID, Intune'],
           ],
           languages: ['Norwegian (native)', 'English (fluent)', 'Kurdish (fluent)'],
-          health: [
-            'Registered nurse with experience from home care services and health insurance.',
-            'I have worked closely with clinical software, documentation and user guidance in a sector with high demands on quality and accuracy.',
-          ],
         },
       }
 
@@ -532,8 +516,8 @@
               return (
                 '<div class="entry"><div class="entry-head">' +
                 '<div class="entry-title">' + esc(e.title) +
-                ' <span class="thin">· ' + esc(e.place) + '</span></div>' +
-                '<div class="entry-date">' + esc(e.date) + '</div></div></div>'
+                ' <span class="thin">· ' + esc(e.place) + ' · ' + esc(e.date) + '</span></div>' +
+                '</div></div>'
               )
             })
             .join('') +
@@ -565,8 +549,8 @@
               return (
                 '<div class="entry"><div class="entry-head">' +
                 '<div class="entry-title">' + esc(e.role) +
-                ' <span class="thin">· ' + esc(e.place) + '</span></div>' +
-                '<div class="entry-date">' + esc(e.date) + '</div></div>' +
+                ' <span class="thin">· ' + esc(e.place) + ' · ' + esc(e.date) + '</span></div>' +
+                '</div>' +
                 '<ul class="bullets">' +
                 e.bullets
                   .map(function (b) {
@@ -590,14 +574,10 @@
           '<section><div class="label">' + esc(t.labels.languages) + '</div>' +
           '<div class="line">' + esc(t.languages.join(', ')) + '</div></section>'
 
-        var health =
-          '<section><div class="label">' + esc(t.labels.health) + '</div>' +
-          '<p class="line">' + esc(t.health.join(' ')) + '</p></section>'
-
         document.getElementById('page').innerHTML =
           header +
           '<div class="main">' +
-          summary + education + projects + experience + tech + languages + health +
+          summary + education + projects + experience + tech + languages +
           '</div>'
 
         document.documentElement.lang = lang === 'no' ? 'no' : 'en'

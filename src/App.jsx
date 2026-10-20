@@ -21,7 +21,11 @@ export default function App() {
       return
     }
 
-    sections.forEach((el) => el.classList.add('reveal'))
+    // Seksjoner som alt er synlige når siden åpnes, får stå i fred. Ellers ville
+    // den ferdigbygde teksten blinket bort og inn igjen.
+    const below = sections.filter((el) => el.getBoundingClientRect().top > window.innerHeight)
+    below.forEach((el) => el.classList.add('reveal'))
+    sections.filter((el) => !below.includes(el)).forEach((el) => el.classList.add('is-visible'))
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -33,7 +37,7 @@ export default function App() {
       },
       { threshold: 0.12 },
     )
-    sections.forEach((el) => observer.observe(el))
+    below.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
   }, [])
