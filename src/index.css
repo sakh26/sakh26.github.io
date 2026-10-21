@@ -1,33 +1,74 @@
 :root {
-  --ink: #3b2c23;      /* Espresso */
-  --ink-60: #665847;   /* Muted Cocoa */
-  --ink-40: #7b6247;   /* Almond */
-  --border: #c9b9a4;   /* Sand, two steps up from the espresso */
-  --surface: #ece5da;  /* Beige, one step up from the sand */
-  --bg: #f8f5f0;       /* Paper, the lightest step */
+  /* Varm off-white som grunn, plomme og burgunder som kontrast. */
+  --ink: #2a1f26;
+  --ink-60: #5c4c55;
+  --ink-40: #85707b;
+  --border: #ddd0ca;
+  --surface: #ffffff;
+  --bg: #faf8f4;
+  --accent: #7c2439;   /* Vinrød: knapper, lenker, markeringer */
+  --accent-ink: #ffffff;
 
-  /* Contact panel — stays a dark statement in both themes */
-  --panel-bg: #3b2c23;
-  --panel-ink: #f8f5f0;
-  --panel-muted: #ba9f83;
-  --panel-border: #6f5f4d;
+  /* Hver seksjon har sin egen bakgrunn */
+  --about-bg: #f3e7e4;      /* Blush */
+  --projects-bg: #ffffff;
+  --education-bg: #33253f;  /* Aubergine, mørk */
+  --skills-bg: #ece6f2;     /* Lys lilla */
+  --experience-bg: #faf8f4;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  /* Farger inne i den mørke utdannelsesseksjonen */
+  --dark-ink: #f7efea;
+  --dark-ink-60: #d6c3c9;
+  --dark-ink-40: #b29ba4;
+  --dark-border: #54456a;
+  --dark-surface: #43355a;
 
-  --radius: 4px;
+  /* Kontaktfeltet nederst */
+  --panel-bg: #6b2134;      /* Vinrød */
+  --panel-ink: #fbf3ee;
+  --panel-muted: #e2c4cb;
+  --panel-border: #94485c;
+  --panel-cta: #f3e7e4;     /* Samme lyse rosa som bak Om meg */
+  --panel-cta-ink: #5a1a2b;
+
+  /* Fargefeltene bak toppen */
+  --blob-1: #f1d3d8;
+  --blob-2: #e3d5ef;
+  --blob-3: #f3e0d6;
+
+  --font-display: 'Jost', 'Futura', system-ui, sans-serif;
+  --font-body: 'Jost', 'Futura', system-ui, sans-serif;
+
+  --radius: 2px;
   --max-w: 1080px;
+  --gutter: max(2rem, calc((100% - var(--max-w)) / 2 + 2rem));
 
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --ink: #efe6d6;
-  --ink-60: #c4b39b;
-  --ink-40: #93826a;
-  --border: #4a3d31;
-  --surface: #2a2119;
-  --bg: #1b1611;
+  --ink: #f1e8e4;
+  --ink-60: #c9b7bd;
+  --ink-40: #9a8590;
+  --border: #45363e;
+  --surface: #2a2026;
+  --bg: #1a1418;
+  --accent: #d8909f;
+  --accent-ink: #1a1418;
+
+  --about-bg: #241a1f;
+  --projects-bg: #1f181c;
+  --education-bg: #2a2036;
+  --skills-bg: #211c28;
+  --experience-bg: #1a1418;
+
+  --dark-surface: #3a2d4c;
+
+  --panel-bg: #4f1726;
+
+  --blob-1: #3a1f29;
+  --blob-2: #2c2240;
+  --blob-3: #33241f;
 
   color-scheme: dark;
 }

@@ -15,8 +15,10 @@ export default function App() {
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll('section'))
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // Roboter som tar bilde av siden scroller ikke, og ville sett resten som tomt.
+    const automated = navigator.webdriver === true
 
-    if (reduce) {
+    if (reduce || automated) {
       sections.forEach((el) => el.classList.add('is-visible'))
       return
     }

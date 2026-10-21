@@ -8,6 +8,7 @@
   gap: 2rem;
   padding: 1rem 2rem;
   background: var(--bg);
+  border-top: 3px solid var(--accent);
   border-bottom: 0.5px solid var(--border);
 }
 .nav-logo {
@@ -22,7 +23,7 @@
 }
 .nav-links a {
   font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-40);
   transition: color 0.2s;
@@ -36,9 +37,9 @@
 .nav-links a.nav-active::after {
   content: '';
   display: block;
-  height: 1px;
+  height: 1.5px;
   margin-top: 3px;
-  background: var(--ink-40);
+  background: var(--accent);
 }
 .nav-actions {
   display: flex;
@@ -101,16 +102,18 @@
   color: var(--ink);
 }
 .nav-cv {
-  font-size: 0.75rem;
-  padding: 0.4rem 1rem;
-  border: 0.5px solid var(--border);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--accent);
   border-radius: var(--radius);
-  color: var(--ink-60);
-  transition: border-color 0.2s, color 0.2s;
+  color: var(--accent);
+  transition: background 0.2s, color 0.2s;
 }
 .nav-cv:hover {
-  border-color: var(--ink);
-  color: var(--ink);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 
 /* ─── HERO ───────────────────────────────────────────── */
@@ -119,40 +122,164 @@
   grid-template-columns: 0.72fr 1.28fr;
   gap: 3.6rem;
   align-items: center;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 4.5rem 2rem 5.5rem;
-  border-bottom: 0.5px solid var(--border);
+  padding: 4.5rem var(--gutter) 5.5rem;
+  background: var(--bg);
+}
+/* Rolige fargefelt og svevende blomster bak bildet og navnet. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero > :not(.hero-bg) {
+  position: relative;
+  z-index: 1;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.85;
+  will-change: transform;
+  animation: hero-drift 24s ease-in-out infinite alternate;
+}
+.hero-blob-1 {
+  width: 34rem;
+  height: 34rem;
+  top: -12rem;
+  left: 38%;
+  background: var(--blob-1);
+}
+.hero-blob-2 {
+  width: 28rem;
+  height: 28rem;
+  bottom: -12rem;
+  right: -6rem;
+  background: var(--blob-2);
+  animation-duration: 30s;
+  animation-delay: -8s;
+}
+.hero-blob-3 {
+  width: 24rem;
+  height: 24rem;
+  top: 20%;
+  left: -8rem;
+  background: var(--blob-3);
+  animation-duration: 27s;
+  animation-delay: -15s;
+}
+@keyframes hero-drift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(3rem, 2rem) scale(1.08);
+  }
+  to {
+    transform: translate(-2rem, -1.5rem) scale(0.96);
+  }
+}
+.hero-floater {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--accent);
+  opacity: 0.35;
+  animation: hero-float 16s ease-in-out infinite alternate;
+}
+.hero-floater-1 {
+  top: 12%;
+  left: 52%;
+}
+.hero-floater-2 {
+  top: 70%;
+  left: 6%;
+  width: 1.3rem;
+  height: 1.3rem;
+  animation-duration: 19s;
+  animation-delay: -5s;
+}
+.hero-floater-3 {
+  top: 18%;
+  right: 8%;
+  width: 2rem;
+  height: 2rem;
+  animation-duration: 21s;
+  animation-delay: -11s;
+}
+.hero-floater-4 {
+  bottom: 12%;
+  left: 46%;
+  width: 1.1rem;
+  height: 1.1rem;
+  animation-duration: 18s;
+  animation-delay: -3s;
+}
+.hero-floater-5 {
+  bottom: 22%;
+  right: 14%;
+  animation-duration: 23s;
+  animation-delay: -9s;
+}
+.hero-floater-6 {
+  top: 8%;
+  left: 4%;
+  width: 1.2rem;
+  height: 1.2rem;
+  animation-duration: 20s;
+  animation-delay: -14s;
+}
+@keyframes hero-float {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(0.8rem, -1.4rem) rotate(28deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob,
+  .hero-floater {
+    animation: none;
+  }
+}
+@media (max-width: 720px) {
+  .hero-floater-1,
+  .hero-floater-4 {
+    display: none;
+  }
 }
 .hero-portrait {
   position: relative;
-  max-width: 340px;
-  aspect-ratio: 4 / 5;
+  max-width: 380px;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: 18px;
   background: var(--surface);
-  border: 2px solid var(--ink-40);
+  border: 1px solid var(--accent);
 }
 .hero-portrait img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.14);
-  transform-origin: 50% 34%;
+  height: auto;
 }
 .eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-40);
+  color: var(--accent);
   margin-bottom: 0.9rem;
 }
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.6rem, 6vw, 4.6rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
 }
 .hero-creds {
@@ -166,7 +293,7 @@
   flex-direction: column;
   gap: 0.1rem;
   padding-left: 0.9rem;
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--accent);
 }
 .cred-main {
   font-size: 0.95rem;
@@ -183,22 +310,26 @@
   flex-wrap: wrap;
 }
 .btn-dark {
-  background: var(--ink);
-  color: var(--bg);
-  padding: 0.65rem 1.5rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.7rem 1.6rem;
   border-radius: var(--radius);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   transition: opacity 0.2s;
 }
 .btn-dark:hover {
   opacity: 0.85;
 }
 .btn-outline {
-  border: 0.5px solid var(--border);
-  color: var(--ink-60);
-  padding: 0.65rem 1.5rem;
+  border: 1px solid var(--ink-40);
+  color: var(--ink);
+  padding: 0.7rem 1.6rem;
   border-radius: var(--radius);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   transition: border-color 0.2s, color 0.2s;
 }
 .btn-outline:hover {
@@ -212,10 +343,29 @@
 .skills,
 .education,
 .experience {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 4.75rem 2rem;
-  border-bottom: 0.5px solid var(--border);
+  padding: 5rem var(--gutter);
+  color: var(--ink);
+}
+.about {
+  background: var(--about-bg);
+}
+.projects {
+  background: var(--projects-bg);
+}
+.skills {
+  background: var(--skills-bg);
+}
+.experience {
+  background: var(--experience-bg);
+}
+/* Mørk seksjon midt på siden: fargene byttes for alt inni den. */
+.education {
+  --ink: var(--dark-ink);
+  --ink-60: var(--dark-ink-60);
+  --ink-40: var(--dark-ink-40);
+  --border: var(--dark-border);
+  --surface: var(--dark-surface);
+  background: var(--education-bg);
 }
 
 /* ─── SCROLL REVEAL ──────────────────────────────────── */
@@ -227,6 +377,12 @@ section.reveal {
 section.reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+@media print {
+  section.reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ─── ABOUT ──────────────────────────────────────────── */
@@ -258,7 +414,8 @@ section.reveal.is-visible {
   height: 2rem;
   padding: 0.35rem;
   border-radius: 50%;
-  background: var(--bg);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 @media (prefers-reduced-motion: reduce) {
   .about-badge:hover {
@@ -273,13 +430,9 @@ section.reveal.is-visible {
   margin-top: 1.75rem;
 }
 .about-body p {
-  font-size: 1rem;
-  color: var(--ink-60);
-  line-height: 1.8;
-}
-.about-body p:first-child {
+  font-size: 1.05rem;
   color: var(--ink);
-  font-size: 1.15rem;
+  line-height: 1.8;
 }
 .section-header {
   display: flex;
@@ -289,9 +442,8 @@ section.reveal.is-visible {
 }
 .section-title {
   font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-size: 2rem;
+  font-weight: 500;
 }
 /* A thin line that draws itself under the title when the section scrolls in. */
 .title-underline {
@@ -304,8 +456,8 @@ section.reveal.is-visible {
   left: 0;
   right: 0;
   bottom: -0.2rem;
-  height: 1px;
-  background: var(--ink-40);
+  height: 1.5px;
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.9s ease 0.4s;
@@ -315,7 +467,9 @@ section.reveal.is-visible {
 }
 .section-link {
   font-size: 0.75rem;
-  color: var(--ink-40);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
   transition: color 0.2s;
 }
 .section-link:hover {
@@ -324,40 +478,155 @@ section.reveal.is-visible {
 
 /* ─── PROJECT CARDS ──────────────────────────────────── */
 .project-grid {
+  --gap: 1.75rem;
+  --card-h: 13.5rem;
+  --slot: calc((100cqw - 2 * var(--gap)) / 3);
+  --step: calc(var(--slot) + var(--gap));
+  --wide: calc(2 * var(--slot) + var(--gap));
+  --pad: 1.75rem;
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --open: 0.5s;
+  container-type: inline-size;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: start;
-  gap: 1.75rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+.projects {
+  position: relative;
+  z-index: 2;
+}
+/* Plassen kortet står på. Den står helt stille og har fast høyde, så kortet
+   kan vokse over siden uten å dytte noe. */
+.proj-slot {
+  position: relative;
+  height: var(--card-h);
 }
 .proj-card {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  min-height: var(--card-h);
   border: 0.5px solid var(--border);
+  border-top: 3px solid var(--accent);
   border-radius: var(--radius);
-  background: var(--surface);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  background: var(--bg);
+  outline: none;
+  /* Lukking: starter med en gang og glir rolig sammen. Kortet blir liggende
+     øverst til det er ferdig, så det ikke smetter bak de andre underveis. */
+  transition:
+    left var(--open) var(--ease),
+    right var(--open) var(--ease),
+    box-shadow var(--open) var(--ease),
+    z-index var(--open) linear;
 }
-.proj-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--ink-40);
+/* Åpent kort blir to kort bredt og legger seg over naboen. Kortet til venstre
+   vokser mot høyre, midtkortet like mye til begge sider og kortet til høyre mot
+   venstre. Hvilket kort som er åpent, styres av useOpenCard ut fra plassene som
+   står stille, så kortet ikke kan blafre når musen står i kanten. */
+.proj-slot.is-open .proj-card,
+.proj-card:focus-visible,
+.proj-card:has(:focus-visible) {
+  z-index: 20;
+  box-shadow: 0 24px 56px -18px rgba(42, 31, 38, 0.35);
+  transition:
+    left var(--open) var(--ease),
+    right var(--open) var(--ease),
+    box-shadow var(--open) var(--ease),
+    z-index 0s;
 }
-.proj-card-top {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+.proj-slot:nth-child(3n + 1).is-open .proj-card,
+.proj-slot:nth-child(3n + 1) .proj-card:is(:focus-visible, :has(:focus-visible)) {
+  right: calc(-1 * var(--step));
 }
-.proj-index {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--ink-60);
+.proj-slot:nth-child(3n + 2).is-open .proj-card,
+.proj-slot:nth-child(3n + 2) .proj-card:is(:focus-visible, :has(:focus-visible)) {
+  left: calc(-0.5 * var(--step));
+  right: calc(-0.5 * var(--step));
+}
+.proj-slot:nth-child(3n).is-open .proj-card,
+.proj-slot:nth-child(3n) .proj-card:is(:focus-visible, :has(:focus-visible)) {
+  left: calc(-1 * var(--step));
+}
+.proj-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.proj-front {
+  width: var(--slot);
+  padding: var(--pad);
+}
+.proj-front .tag {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+}
+/* Resten av innholdet brettes ut nedover. Det er alltid lagt ut i full bredde,
+   så det bare dukker opp og aldri hopper. */
+.proj-more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--open) var(--ease);
+}
+.proj-more-inner {
+  min-height: 0;
+  overflow: hidden;
+  width: var(--wide);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.proj-more-body {
+  padding: 0 var(--pad) var(--pad);
+}
+.proj-slot.is-open .proj-more,
+.proj-card:is(:focus-visible, :has(:focus-visible)) .proj-more {
+  grid-template-rows: 1fr;
+}
+.proj-slot.is-open .proj-more-inner,
+.proj-card:is(:focus-visible, :has(:focus-visible)) .proj-more-inner {
+  opacity: 1;
+  transition: opacity 0.35s ease 0.2s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .proj-card,
+  .proj-slot.is-open .proj-card,
+  .proj-more,
+  .proj-more-inner {
+    transition: none;
+  }
+}
+/* Smale skjermer og berøringsskjermer: kortene står under hverandre og
+   brettes ut der de står når man trykker på dem. */
+@media (max-width: 900px), (hover: none) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    --slot: 100cqw;
+  }
+  .proj-slot {
+    height: auto;
+  }
+  .proj-card,
+  .proj-slot:nth-child(n).is-open .proj-card,
+  .proj-slot:nth-child(n) .proj-card:is(:focus-visible, :has(:focus-visible)),
+  .proj-slot:nth-child(n) .proj-card:focus-within {
+    position: relative;
+    left: 0;
+    right: 0;
+    min-height: 0;
+    cursor: pointer;
+  }
+  .proj-card:focus-within .proj-more {
+    grid-template-rows: 1fr;
+  }
+  .proj-card:focus-within .proj-more-inner {
+    opacity: 1;
+  }
 }
 .proj-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 0.25rem 0 1.5rem;
+  margin-top: 0.9rem;
 }
 .proj-tech li {
   font-size: 0.7rem;
@@ -370,7 +639,6 @@ section.reveal.is-visible {
 .proj-actions {
   display: flex;
   gap: 1.25rem;
-  margin-top: auto;
 }
 .tag {
   font-size: 0.65rem;
@@ -380,14 +648,14 @@ section.reveal.is-visible {
   border-radius: 2px;
 }
 .tag-hobby {
-  background: var(--border);
-  color: var(--ink);
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 .tag-skole,
 .tag-skoleprosjekt,
 .tag-school,
 .tag-school-project {
-  background: rgba(170, 140, 107, 0.28);
+  background: var(--about-bg);
   color: var(--ink);
 }
 .tag-under-utvikling,
@@ -402,22 +670,20 @@ section.reveal.is-visible {
 }
 .proj-name {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.4rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 .proj-desc {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--ink-60);
   line-height: 1.6;
-  margin-bottom: 1rem;
-  max-width: 42ch;
+  margin-bottom: 1.25rem;
 }
 .proj-why {
-  max-width: 42ch;
   margin-bottom: 1.25rem;
   padding-left: 0.9rem;
-  border-left: 0.5px solid var(--border);
+  border-left: 2px solid var(--about-bg);
 }
 .proj-why-label {
   font-size: 0.7rem;
@@ -455,7 +721,7 @@ section.reveal.is-visible {
 .proj-progress-bar span {
   display: block;
   height: 100%;
-  background: var(--ink);
+  background: var(--accent);
 }
 .proj-progress-list {
   display: flex;
@@ -464,7 +730,7 @@ section.reveal.is-visible {
 }
 .proj-progress-list li {
   display: grid;
-  grid-template-columns: 0.75rem 1fr auto;
+  grid-template-columns: 0.75rem 1fr;
   align-items: center;
   gap: 0.6rem;
   font-size: 0.85rem;
@@ -477,16 +743,11 @@ section.reveal.is-visible {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
-  background: var(--ink);
+  background: var(--accent);
 }
 .is-now .proj-progress-mark {
   background: transparent;
   border: 1.5px solid var(--ink-40);
-}
-.proj-progress-state {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--ink-60);
 }
 
 .proj-link {
@@ -502,9 +763,9 @@ section.reveal.is-visible {
 }
 /* Live-demoen er hovedhandlingen på kortet — den skal leses først. */
 .proj-link-live {
-  color: var(--ink);
+  color: var(--accent);
   font-weight: 600;
-  border-bottom-color: var(--ink-40);
+  border-bottom-color: var(--accent);
 }
 
 /* ─── PROSJEKTVIDEO ──────────────────────────────────── */
@@ -592,8 +853,8 @@ section.reveal.is-visible {
   gap: 2.5rem;
 }
 .skills-group-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-40);
   margin-bottom: 0.9rem;
@@ -605,8 +866,8 @@ section.reveal.is-visible {
   gap: 0.4rem;
 }
 .skills-list li {
-  font-size: 0.88rem;
-  color: var(--ink-60);
+  font-size: 0.95rem;
+  color: var(--ink);
   padding: 0.35rem 0;
   border-bottom: 0.5px solid var(--border);
 }
@@ -629,7 +890,7 @@ section.reveal.is-visible {
   padding: 1.1rem 0.5rem 0.9rem;
   border: 0.5px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--bg);
   font-size: 0.78rem;
   color: var(--ink-60);
   text-align: center;
@@ -664,6 +925,9 @@ section.reveal.is-visible {
   padding: 1.1rem 0;
   border-bottom: 0.5px solid var(--border);
   align-items: baseline;
+}
+.timeline-item.is-collapsed {
+  display: none;
 }
 .timeline-item:first-child {
   border-top: 0.5px solid var(--border);
@@ -705,7 +969,7 @@ section.reveal.is-visible {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--ink-40);
+  color: var(--accent);
 }
 .show-more {
   display: inline-flex;
@@ -734,11 +998,7 @@ section.reveal.is-visible {
 /* ─── CONTACT ────────────────────────────────────────── */
 .contact {
   background: var(--panel-bg);
-  padding: 5rem 2rem;
-}
-.contact-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
+  padding: 5rem var(--gutter);
 }
 .contact-eyebrow {
   color: var(--panel-muted);
@@ -746,7 +1006,7 @@ section.reveal.is-visible {
 .contact-title {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--panel-ink);
   margin: 0.5rem 0 0.75rem;
 }
@@ -757,25 +1017,43 @@ section.reveal.is-visible {
 }
 .contact-links {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
   gap: 0.6rem;
-}
-.contact-links a {
-  font-size: 0.9rem;
-  color: var(--panel-muted);
-  transition: color 0.2s, border-color 0.2s;
-  width: fit-content;
-  border-bottom: 0.5px solid transparent;
-}
-.contact-links a:hover {
+  padding: 0.85rem 1.4rem;
+  border: 1px solid var(--panel-muted);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--panel-ink);
-  border-color: var(--panel-border);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.contact-btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+}
+.contact-btn:hover,
+.contact-btn:focus-visible {
+  background: var(--panel-cta);
+  border-color: var(--panel-cta);
+  color: var(--panel-cta-ink);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-btn:hover {
+    transform: none;
+  }
 }
 
 /* ─── FOOTER ─────────────────────────────────────────── */
 .footer {
-  background: var(--surface);
-  padding: 1rem 2rem;
+  background: var(--bg);
+  padding: 1rem var(--gutter);
   display: flex;
   justify-content: space-between;
   font-size: 0.72rem;
@@ -785,15 +1063,12 @@ section.reveal.is-visible {
 
 /* ─── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 720px) {
-  .project-grid {
-    grid-template-columns: 1fr;
+  :root {
+    --gutter: 1.25rem;
   }
-}
-
-@media (max-width: 720px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 3rem 1.25rem 2.5rem;
+    padding: 3rem var(--gutter) 2.5rem;
   }
   .hero-portrait {
     max-width: 270px;

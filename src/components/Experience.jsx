@@ -7,15 +7,16 @@ export default function Experience() {
 
   const current = t.experience.items.filter((item) => item.current)
   const rest = t.experience.items.filter((item) => !item.current)
-  const visible = expanded ? [...current, ...rest] : current
 
+  // All erfaring står i HTML-en, så den kan leses uten JavaScript. Den eldre
+  // erfaringen skjules bare med CSS til man trykker på knappen.
   return (
     <section className="experience" id="erfaring">
       <h2 className="section-title">{t.experience.title}</h2>
       <ol className="timeline">
-        {visible.map((item) => (
+        {[...current, ...rest].map((item) => (
           <li
-            className={`timeline-item${item.current ? ' timeline-featured' : ''}`}
+            className={`timeline-item${item.current ? ' timeline-featured' : ''}${!item.current && !expanded ? ' is-collapsed' : ''}`}
             key={`${item.role}-${item.date}`}
           >
             <span className="timeline-date">{item.date}</span>

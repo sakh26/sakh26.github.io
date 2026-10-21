@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 
 export function useActiveSection(ids) {
   const [active, setActive] = useState(ids[0])
+  // Listen lages på nytt ved hver tegning, så effekten følger innholdet i stedet.
+  const key = ids.join(',')
 
   useEffect(() => {
-    const observers = ids
+    const observers = key
+      .split(',')
       .map((id) => {
         const el = document.getElementById(id)
         if (!el) return null
@@ -20,7 +23,7 @@ export function useActiveSection(ids) {
       .filter(Boolean)
 
     return () => observers.forEach((obs) => obs.disconnect())
-  }, [ids.join(',')])
+  }, [key])
 
   return active
 }
