@@ -1,48 +1,40 @@
-# Portefølje — Sara Khudadad
+# Portefølje
 
-Min personlige porteføljeside. Den presenterer bakgrunnen min som utviklerstudent
-og tidligere sykepleier, prosjektene jeg bygger og hvordan jeg kan kontaktes.
+Personlig porteføljeside for Sara Khudadad. Siden viser bakgrunn, prosjekter,
+utdanning, ferdigheter, erfaring og kontaktinformasjon.
 
-**Live:** https://sakh26.github.io
+Nettside: https://sarak.dev
 
-![Forsiden til porteføljen](docs/screenshot.png)
+![Skjermbilde av forsiden](docs/screenshot.png)
 
-## Funksjonalitet
+## Innhold
 
-- **Tospråklig** — hele innholdet finnes på norsk og engelsk, og byttes med NO/EN
-  i menyen. Sidetittel og `lang`-attributt følger valget.
-- **Lyst og mørkt tema** — valget lagres i nettleseren og gjelder ved neste besøk.
-- **Responsivt** — utfoldbar meny på mobil, og seksjoner som legger seg om på
-  smale skjermer.
-- **Demovideo på prosjektkort** — videoen lastes først når man trykker play, slik at
-  mobilbrukere ikke betaler for den uoppfordret.
-- **Aktiv seksjon i menyen** — menypunktet markeres etter hvor på siden man er.
-- **Ferdig HTML ved bygging** — siden gjøres om til vanlig HTML når den bygges, så all
-  tekst står i sidekilden for søkemotorer og rekrutteringssystemer som ikke kjører JavaScript.
-- **Universell utforming** — tastaturvennlig meny, tekstalternativer på bilder og
-  respekt for `prefers-reduced-motion` for de som har slått av animasjoner.
+- Norsk og engelsk, med språkvalg i menyen
+- Lyst og mørkt tema
+- Tilpasset mobil, nettbrett og PC
+- Prosjektkort som åpnes for å vise beskrivelse, lenker og demovideo
+- CV på norsk og engelsk som kan lastes ned
+- Teksten bygges inn i HTML-en, slik at søkemotorer kan lese den
 
 ## Teknologi
 
-React 19 · Vite · CSS uten rammeverk · oxlint · GitHub Actions · GitHub Pages
+- React 19
+- Vite
+- CSS
+- oxlint
+- GitHub Actions og GitHub Pages
 
-## Struktur
+## Mapper
 
 ```
 src/
-├── App.jsx                  Setter sammen seksjonene
-├── App.css                  All styling
-├── components/              En komponent per seksjon
-├── hooks/
-│   ├── useActiveSection.js  Markerer menypunktet man er på
-│   └── useTheme.js          Lyst/mørkt tema
-└── i18n/
-    ├── translations.js      Alt tekstinnhold, norsk og engelsk
-    └── LanguageContext.jsx  Språkvalget deles med hele siden
+  components/   Én komponent per seksjon
+  hooks/        Meny, prosjektkort og tema
+  i18n/         All tekst på norsk og engelsk
+cv/             Kilden til CV-en
+public/         Bilder, video og CV som PDF
+scripts/        Bygger ferdig HTML av siden
 ```
-
-Alt tekstinnhold ligger samlet i `src/i18n/translations.js`, med ett objekt for `no`
-og ett for `en`. Ingen tekst er skrevet direkte inn i komponentene.
 
 ## Kjøre lokalt
 
@@ -51,7 +43,12 @@ npm install
 npm run dev
 ```
 
+Bygge siden:
+
+```bash
+npm run build
+```
+
 ## Publisering
 
-`.github/workflows/pages.yml` kjører ved hver push til `main`: lint, produksjonsbygg
-(med ferdig HTML) og publisering til GitHub Pages. Ingen manuell deploy.
+Siden publiseres automatisk til GitHub Pages ved hver push til `main`.

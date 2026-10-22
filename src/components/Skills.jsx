@@ -24,6 +24,8 @@ import sqlite from '../assets/icons/sqlite.svg'
 import testing from '../assets/icons/testing.svg'
 import entra from '../assets/icons/entra.svg'
 import intune from '../assets/icons/intune.svg'
+import claude from '../assets/icons/claude.svg'
+import canva from '../assets/icons/canva.svg'
 
 // Ikonene er de samme på begge språk, så de slås opp på navnet.
 // Svarte ikoner er merket mono, slik at de kan lysne i mørkt tema.
@@ -54,6 +56,8 @@ const icons = {
   'Test principles (ISTQB)': { src: testing, mono: true },
   'Microsoft Entra ID': { src: entra, mono: true },
   Intune: { src: intune, mono: true },
+  'Claude Code': { src: claude },
+  Canva: { src: canva },
 }
 
 export default function Skills() {

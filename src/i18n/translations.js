@@ -36,7 +36,7 @@ export const translations = {
       ],
       body: [
         'Etter flere år i helsevesenet oppdaget jeg at det var problemløsingen og systemene bak jeg likte best, så jeg tok steget over i utvikling. Bakgrunnen fra helse har gitt meg ryddige arbeidsvaner, ansvarsfølelse og erfaring med å samarbeide på tvers av fagfelt.',
-        'Jeg er nysgjerrig av natur og liker å forstå hvordan ting henger sammen. Nå gleder jeg meg til å komme ut i arbeidslivet, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker. Jeg er klar for å ta ansvar og stå i det over tid.',
+        'Jeg er nysgjerrig av natur og liker å forstå hvordan ting henger sammen. Nå gleder jeg meg til å komme ut i arbeidslivet, lære av menneskene jeg jobber med og få erfaring fra prosjekter som folk faktisk bruker.',
       ],
     },
     projects: {
@@ -55,7 +55,7 @@ export const translations = {
           why: 'Jeg lagde Jeoparty til min egen bursdag. Jeg hadde spilt lignende spill i flere selskaper, men alltid på samme måte: verten hadde laget en stor plakat med kategorier, poeng og lagnavn, og satt med mobilen for å finne riktig sang. Det ble mye hoderegning, noteringer og leting midt i moroa. Jeg ville ha det digitalt. Sangen starter når du trykker på ruten, poengene summerer seg selv, og lagene ligger inne fra start. Etterpå utvidet jeg spillet så hvem som helst kan lage egne kategorier, hint/svar og lag.',
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
-          live: 'https://sakh26.github.io/Jeoparty/',
+          live: 'https://sarak.dev/Jeoparty/',
           video: '/media/jeoparty-demo.mp4',
           videoPoster: '/media/jeoparty-poster.jpg',
         },
@@ -102,7 +102,7 @@ export const translations = {
         { label: 'Programmeringsspråk', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databaser & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Testprinsipper (ISTQB)'] },
-        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
+        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune'] },
       ],
     },
     education: {
@@ -224,7 +224,7 @@ export const translations = {
       ],
       body: [
         'After several years in healthcare, I discovered it was the problem-solving and the systems behind it all that I enjoyed most, so I made the move into development. My background in healthcare gave me tidy work habits, a strong sense of responsibility, and experience collaborating across fields.',
-        "I'm curious by nature and like to understand how things fit together. Now I'm looking forward to starting my career, learning from the people I work with and gaining experience from projects that people actually use. I'm ready to take responsibility and see things through.",
+        "I'm curious by nature and like to understand how things fit together. Now I'm looking forward to starting my career, learning from the people I work with and gaining experience from projects that people actually use.",
       ],
     },
     projects: {
@@ -243,7 +243,7 @@ export const translations = {
           why: "I built Jeoparty for my own birthday. I'd played similar games at plenty of parties, but always the same way: the host had made a big poster with categories, scores and team names, and sat with their phone to find the right song. It meant a lot of mental arithmetic, note-taking and searching in the middle of the fun. I wanted it digital. The song starts when you click a tile, the scores add themselves up, and the teams are in from the start. Afterwards I extended the game so anyone can build their own categories, hints/answers and teams.",
           tech: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
           repo: 'Jeoparty',
-          live: 'https://sakh26.github.io/Jeoparty/',
+          live: 'https://sarak.dev/Jeoparty/',
           video: '/media/jeoparty-demo.mp4',
           videoPoster: '/media/jeoparty-poster.jpg',
         },
@@ -290,7 +290,7 @@ export const translations = {
         { label: 'Programming languages', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Frameworks & libraries', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databases & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Test principles (ISTQB)'] },
-        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Microsoft Entra ID', 'Intune'] },
+        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune'] },
       ],
     },
     education: {
