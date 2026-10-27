@@ -5,12 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Sidene bygges hver for seg, så stilene ikke blandes:
-    // den delte forsiden og den seriøse porteføljen.
+    // Tre sider som bygges hver for seg, så stilene ikke blandes:
+    // den delte forsiden, den seriøse porteføljen og rommet.
     rollupOptions: {
       input: {
         forside: 'index.html',
         portefolje: 'portefolje/index.html',
+        rommet: 'rommet/index.html',
       },
     },
   },
