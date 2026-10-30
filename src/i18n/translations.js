@@ -102,7 +102,7 @@ export const translations = {
         { label: 'Programmeringsspråk', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Rammeverk & biblioteker', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databaser & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Testprinsipper (ISTQB)'] },
-        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune'] },
+        { label: 'Verktøy & systemer', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune', 'ServiceNow', 'Pureservice'] },
       ],
     },
     education: {
@@ -290,7 +290,7 @@ export const translations = {
         { label: 'Programming languages', items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
         { label: 'Frameworks & libraries', items: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
         { label: 'Databases & testing', items: ['PostgreSQL', 'SQLite', 'Vitest', 'Test principles (ISTQB)'] },
-        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune'] },
+        { label: 'Tools & systems', items: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune', 'ServiceNow', 'Pureservice'] },
       ],
     },
     education: {
