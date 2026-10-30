@@ -1,5 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext'
 import java from '../assets/icons/java.svg'
+import kotlin from '../assets/icons/kotlin.svg'
 import csharp from '../assets/icons/csharp.svg'
 import python from '../assets/icons/python.svg'
 import javascript from '../assets/icons/javascript.svg'
@@ -33,6 +34,7 @@ import pureservice from '../assets/icons/pureservice.svg'
 // Svarte ikoner er merket mono, slik at de kan lysne i mørkt tema.
 const icons = {
   Java: { src: java },
+  Kotlin: { src: kotlin },
   'C#': { src: csharp },
   Python: { src: python },
   JavaScript: { src: javascript },
