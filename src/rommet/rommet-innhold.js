@@ -97,7 +97,7 @@ export const ting = {
     merkelapp: 'Ferdigheter',
     tittel: 'Ferdigheter',
     grupper: [
-      { tittel: 'Programmeringsspråk', ting: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
+      { tittel: 'Programmeringsspråk', ting: ['Java', 'Kotlin', 'C#', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'HTML', 'CSS'] },
       { tittel: 'Rammeverk & biblioteker', ting: ['Spring Boot', 'ASP.NET Core', 'FastAPI', 'React', 'Bootstrap'] },
       { tittel: 'Databaser & testing', ting: ['PostgreSQL', 'SQLite', 'Vitest', 'Testprinsipper (ISTQB)'] },
       {
