@@ -102,7 +102,7 @@ export const ting = {
       { tittel: 'Databaser & testing', ting: ['PostgreSQL', 'SQLite', 'Vitest', 'Testprinsipper (ISTQB)'] },
       {
         tittel: 'Verktøy & systemer',
-        ting: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune'],
+        ting: ['Git', 'GitHub', 'GitHub Actions', 'Docker', 'Vite', 'Linux', 'Claude Code', 'Canva', 'Microsoft Entra ID', 'Intune', 'ServiceNow', 'Pureservice'],
       },
     ],
   },
