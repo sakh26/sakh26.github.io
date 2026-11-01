@@ -113,13 +113,6 @@
   text-wrap: balance;
 }
 
-.lek .fs-under {
-  margin: 0;
-  font-size: 19px;
-  line-height: 1.5;
-  color: var(--aubergine);
-}
-
 .lek .fs-inn {
   display: inline-flex;
   align-items: center;
@@ -249,7 +242,6 @@
 
   .lek .fs-midt { gap: 14px; max-width: 300px; }
   .lek .fs-tittel { font-size: 40px; line-height: 0.98; }
-  .lek .fs-under { display: none; }
   .lek .fs-inn {
     gap: 10px;
     min-height: 56px;

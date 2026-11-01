@@ -95,7 +95,6 @@ export default function Forside() {
         <Former />
         <div className="fs-midt">
           <h1 className="fs-tittel">Kom inn i rommet mitt</h1>
-          <p className="fs-under">Klikk på tingene i rommet og bli kjent med meg.</p>
           <a className="fs-inn" href="/rommet/">
             Gå inn i rommet
             <svg className="nudge" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true">
