@@ -70,6 +70,9 @@ function Scene({ rom, variant, onApne, natt, onNatt }) {
         <svg className="rom-bakgrunn" viewBox={`0 0 ${bredde} ${hoyde}`} aria-hidden="true" focusable="false">
           {rom.bakgrunn}
         </svg>
+        <svg className="rom-maaneskinn" viewBox={`0 0 ${bredde} ${hoyde}`} aria-hidden="true" focusable="false">
+          {rom.maaneskinn}
+        </svg>
         {Object.entries(rom.ting).map(([id, { boks, tegning, lappTilHoyre }]) => (
           <button
             key={id}

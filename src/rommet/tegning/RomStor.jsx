@@ -101,6 +101,30 @@ export const vindu = {
   ),
 }
 
+// Måneskinn fra vinduet ned på gulvet. Vises bare om natten.
+export const maaneskinn = (
+  <>
+    <defs>
+      <radialGradient id="maaneGlodA" cx="1235" cy="275" r="240" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stopColor="#cfd8ff" stopOpacity="0.4" />
+        <stop offset="1" stopColor="#cfd8ff" stopOpacity="0" />
+      </radialGradient>
+      <linearGradient id="maaneStraleA" x1="1235" y1="200" x2="820" y2="850" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stopColor="#cfd8ff" stopOpacity="0.4" />
+        <stop offset="1" stopColor="#cfd8ff" stopOpacity="0.1" />
+      </linearGradient>
+      <filter id="maaneMykA" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="12" /></filter>
+      <filter id="maaneFlekkA" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3" /></filter>
+    </defs>
+    <circle cx="1235" cy="275" r="240" fill="url(#maaneGlodA)" />
+    <path d="M1126 166 H1344 V384 L930 850 H710Z" fill="url(#maaneStraleA)" filter="url(#maaneMykA)" />
+    <g filter="url(#maaneFlekkA)">
+      <path d="M760 750 H980 L930 850 H710Z" fill="#dfe5ff" fillOpacity="0.35" />
+      <path d="M870 750 L820 850 M735 800 H955" stroke="#000000" strokeWidth="9" />
+    </g>
+  </>
+)
+
 export const ting = {
   'utdanning': {
     boks: [90, 186, 240, 274],
