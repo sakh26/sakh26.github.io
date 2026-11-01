@@ -38,12 +38,34 @@ function Listeikon() {
   )
 }
 
-function Scene({ rom, variant, onApne }) {
+function Maneikon({ natt }) {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+      {natt ? (
+        <g stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+          <circle cx="9" cy="9" r="3.6" fill="currentColor" />
+          <path d="M9 1.5 V3 M9 15 V16.5 M1.5 9 H3 M15 9 H16.5 M3.7 3.7 L4.7 4.7 M13.3 13.3 L14.3 14.3 M3.7 14.3 L4.7 13.3 M13.3 4.7 L14.3 3.7" />
+        </g>
+      ) : (
+        <path d="M12.5 2.5 A7 7 0 1 0 15.5 12 A5.5 5.5 0 0 1 12.5 2.5Z" fill="currentColor" />
+      )}
+    </svg>
+  )
+}
+
+function Scene({ rom, variant, onApne, natt, onNatt }) {
   const [bredde, hoyde] = rom.storrelse
   const prosent = (verdi, av) => `${(verdi / av) * 100}%`
+  const plassering = (boks) => ({
+    left: prosent(boks[0], bredde),
+    top: prosent(boks[1], hoyde),
+    width: prosent(boks[2], bredde),
+    height: prosent(boks[3], hoyde),
+  })
 
   return (
     <div className={`rom-scene rom-scene-${variant}`}>
+      <div className="rom-morke" aria-hidden="true" />
       <div className="rom-flate">
         <svg className="rom-bakgrunn" viewBox={`0 0 ${bredde} ${hoyde}`} aria-hidden="true" focusable="false">
           {rom.bakgrunn}
@@ -55,12 +77,7 @@ function Scene({ rom, variant, onApne }) {
             className="rom-ting"
             data-ting={id}
             aria-haspopup="dialog"
-            style={{
-              left: prosent(boks[0], bredde),
-              top: prosent(boks[1], hoyde),
-              width: prosent(boks[2], bredde),
-              height: prosent(boks[3], hoyde),
-            }}
+            style={plassering(boks)}
             onClick={() => onApne(id)}
           >
             <svg viewBox={boks.join(' ')} aria-hidden="true" focusable="false">
@@ -72,6 +89,21 @@ function Scene({ rom, variant, onApne }) {
             </span>
           </button>
         ))}
+        <button
+          type="button"
+          className="rom-ting rom-nattknapp"
+          aria-label="Natt"
+          aria-pressed={natt}
+          style={plassering(rom.vindu.boks)}
+          onClick={onNatt}
+        >
+          <svg viewBox={rom.vindu.boks.join(' ')} aria-hidden="true" focusable="false">
+            {rom.vindu.tegning}
+          </svg>
+          <span className="rom-lapp rom-lapp-ikon">
+            <Maneikon natt={natt} />
+          </span>
+        </button>
       </div>
     </div>
   )
@@ -240,6 +272,7 @@ function Liste({ onTilbake }) {
 export default function Rommet() {
   const [apen, setApen] = useState(null)
   const [liste, setListe] = useState(false)
+  const [natt, setNatt] = useState(false)
   const sistApen = useRef(null)
   const fraListe = useRef(false)
 
@@ -266,6 +299,25 @@ export default function Rommet() {
     window.addEventListener('hashchange', lesAdresse)
     return () => window.removeEventListener('hashchange', lesAdresse)
   }, [lesAdresse])
+
+  // Husker om det var natt sist. Siden lages på forhånd med dag, så valget
+  // leses først når siden er lastet.
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('rom-natt') === 'ja') setNatt(true)
+    } catch {
+      // Uten lagring starter rommet alltid med dag.
+    }
+  }, [])
+
+  const byttNatt = () => {
+    setNatt(!natt)
+    try {
+      localStorage.setItem('rom-natt', natt ? 'nei' : 'ja')
+    } catch {
+      // Valget gjelder da bare til siden lukkes.
+    }
+  }
 
   // Når panelet lukkes, går fokus tilbake til tingen som sist var åpen.
   useEffect(() => {
@@ -309,7 +361,7 @@ export default function Rommet() {
   if (liste) return <Liste onTilbake={skjulListe} />
 
   return (
-    <main className="rom">
+    <main className={natt ? 'rom er-natt' : 'rom'}>
       <div className="rom-alt" inert={apen !== null}>
         <h1 className="lek-skjult">Rommet til Sara Khudadad</h1>
 
@@ -329,8 +381,8 @@ export default function Rommet() {
           </button>
         </header>
 
-        <Scene rom={romStor} variant="stor" onApne={apne} />
-        <Scene rom={romLiten} variant="liten" onApne={apne} />
+        <Scene rom={romStor} variant="stor" onApne={apne} natt={natt} onNatt={byttNatt} />
+        <Scene rom={romLiten} variant="liten" onApne={apne} natt={natt} onNatt={byttNatt} />
 
         <nav className="rom-bunn" aria-label="Snarveier nederst">
           <button type="button" className="rom-vis-liste" onClick={visListe}>

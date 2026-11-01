@@ -167,6 +167,62 @@
 @keyframes rom-cloud { 0% { transform: translateX(-60px); } 100% { transform: translateX(260px); } }
 @keyframes rom-blink { 0% { opacity: 1; } 50% { opacity: 0; } }
 
+/* ---------- Natt ----------
+   Vinduet bytter mellom dag og natt. Om natten legger et mørkt lag seg over
+   vegg og gulv, mens tingene og vinduet ligger over laget og lyser. */
+.lek .rom-morke {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: #6b5fa3;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lek .er-natt .rom-morke {
+  opacity: 1;
+}
+
+.lek .rom-ting {
+  z-index: 2;
+}
+
+.lek .rom-natt,
+.lek .er-natt .rom-dag {
+  opacity: 0;
+}
+
+.lek .er-natt .rom-natt {
+  opacity: 1;
+}
+
+.lek .er-natt .rom-himmel {
+  fill: #2e2a5c;
+}
+
+.moving .lek .rom-morke,
+.moving .lek .rom-natt,
+.moving .lek .rom-dag {
+  transition: opacity 0.6s ease;
+}
+
+.moving .lek .rom-himmel {
+  transition: fill 0.6s ease;
+}
+
+.moving .lek .er-natt .rom-stjerner {
+  animation: rom-blink-myk 3s ease-in-out infinite;
+}
+
+@keyframes rom-blink-myk { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+/* Merket over vinduet viser bare et ikon: månen om dagen, sola om natten */
+.lek .rom-lapp-ikon {
+  padding: 7px;
+  color: var(--sol);
+}
+
 /* Toppfelt og hint */
 .lek .rom-topp {
   position: absolute;

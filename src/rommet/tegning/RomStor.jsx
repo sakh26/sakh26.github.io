@@ -8,7 +8,6 @@ export const bakgrunn = (
   <>
     <defs>
     <pattern id="dotsA" width="48" height="48" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="3" fill="#ffc6ae" /><circle cx="36" cy="36" r="3" fill="#ffc6ae" /></pattern>
-    <clipPath id="glassA"><rect x="1126" y="166" width="218" height="218" /></clipPath>
     </defs>
     <rect x="0" y="0" width="1440" height="700" fill="#ffd9c7" />
     <rect x="0" y="0" width="1440" height="700" fill="url(#dotsA)" />
@@ -28,15 +27,7 @@ export const bakgrunn = (
     <path d="M1022 114 L1062 114 L1042 156Z" fill="#7c2439" stroke="#33253f" strokeWidth="3" strokeLinejoin="round" />
     </g>
     <rect x="1110" y="150" width="250" height="250" rx="6" fill="#ffffff" stroke="#33253f" strokeWidth="3" />
-    <rect x="1126" y="166" width="218" height="218" fill="#a9dfe6" stroke="#33253f" strokeWidth="3" />
-    <g clipPath="url(#glassA)">
-    <circle cx="1290" cy="226" r="30" fill="#ffc145" stroke="#33253f" strokeWidth="3" />
-    <g className="cloud"><path d="M1130 300 a22 22 0 0 1 36 -18 a28 28 0 0 1 50 6 a18 18 0 0 1 6 34 h-86 a16 16 0 0 1 -6 -22Z" fill="#ffffff" stroke="#33253f" strokeWidth="3" /></g>
-    </g>
-    <path d="M1235 166 V384 M1126 275 H1344" stroke="#ffffff" strokeWidth="10" />
     <rect x="1096" y="398" width="278" height="16" rx="3" fill="#f3e7e4" stroke="#33253f" strokeWidth="3" />
-    <rect x="1152" y="370" width="30" height="28" rx="3" fill="#ef6a4c" stroke="#33253f" strokeWidth="3" />
-    <path d="M1167 370 V338 M1167 352 h-10 v-10 M1167 346 h10 v-12" fill="none" stroke="#1f8a80" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M1076 140 H1394" stroke="#33253f" strokeWidth="5" strokeLinecap="round" />
     <path d="M1082 142 H1126 V420 Q1104 432 1082 420Z" fill="#ef6a4c" stroke="#33253f" strokeWidth="3" strokeLinejoin="round" />
     <path d="M1344 142 H1388 V420 Q1366 432 1344 420Z" fill="#ef6a4c" stroke="#33253f" strokeWidth="3" strokeLinejoin="round" />
@@ -76,6 +67,39 @@ export const bakgrunn = (
     <rect x="1342" y="750" width="16" height="34" rx="3" fill="#33253f" />
 </>
 )
+
+// Vinduet er en bryter mellom dag og natt. Glasset ligger her og ikke i
+// bakgrunnen, så det kan lyse når resten av rommet blir mørkt.
+export const vindu = {
+  boks: [1110, 150, 250, 250],
+  tegning: (
+    <>
+      <defs><clipPath id="glassA"><rect x="1126" y="166" width="218" height="218" /></clipPath></defs>
+      <rect className="rom-himmel" x="1126" y="166" width="218" height="218" fill="#a9dfe6" stroke="#33253f" strokeWidth="3" />
+      <g clipPath="url(#glassA)">
+        <g className="rom-dag">
+          <circle cx="1290" cy="226" r="30" fill="#ffc145" stroke="#33253f" strokeWidth="3" />
+          <g className="cloud"><path d="M1130 300 a22 22 0 0 1 36 -18 a28 28 0 0 1 50 6 a18 18 0 0 1 6 34 h-86 a16 16 0 0 1 -6 -22Z" fill="#ffffff" stroke="#33253f" strokeWidth="3" /></g>
+        </g>
+        <g className="rom-natt">
+          <path d="M1290 198 A28 28 0 1 0 1290 254 A34 34 0 0 1 1290 198Z" fill="#fff3c4" stroke="#33253f" strokeWidth="3" strokeLinejoin="round" />
+          <g className="rom-stjerner" fill="#fff3c4">
+            <path d="M1170 190 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4Z" />
+            <path d="M1318 318 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3Z" />
+            <circle cx="1212" cy="232" r="2.5" />
+            <circle cx="1150" cy="252" r="2" />
+            <circle cx="1262" cy="306" r="2.5" />
+            <circle cx="1196" cy="330" r="2" />
+            <circle cx="1328" cy="190" r="2" />
+          </g>
+        </g>
+      </g>
+      <path d="M1235 166 V384 M1126 275 H1344" stroke="#ffffff" strokeWidth="10" />
+      <rect x="1152" y="370" width="30" height="28" rx="3" fill="#ef6a4c" stroke="#33253f" strokeWidth="3" />
+      <path d="M1167 370 V338 M1167 352 h-10 v-10 M1167 346 h10 v-12" fill="none" stroke="#1f8a80" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+}
 
 export const ting = {
   'utdanning': {

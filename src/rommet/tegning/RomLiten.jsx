@@ -25,9 +25,6 @@ export const bakgrunn = (
     <path d="M346 86 L374 86 L360 116Z" fill="#7c2439" />
     </g>
     <rect x="272" y="150" width="100" height="112" rx="5" fill="#ffffff" stroke="#33253f" strokeWidth="2.5" />
-    <rect x="282" y="160" width="80" height="92" fill="#a9dfe6" stroke="#33253f" strokeWidth="2.5" />
-    <circle cx="340" cy="186" r="15" fill="#ffc145" stroke="#33253f" strokeWidth="2.5" />
-    <path d="M322 160 V252 M282 206 H362" stroke="#ffffff" strokeWidth="7" />
     <rect x="264" y="260" width="116" height="12" rx="3" fill="#f3e7e4" stroke="#33253f" strokeWidth="2.5" />
     <path d="M250 142 H390" stroke="#33253f" strokeWidth="4" strokeLinecap="round" />
     <path d="M254 144 H274 V280 Q264 288 254 280Z" fill="#ef6a4c" stroke="#33253f" strokeWidth="2.5" strokeLinejoin="round" />
@@ -48,6 +45,29 @@ export const bakgrunn = (
     <path d="M246 692 H350" stroke="#187168" strokeWidth="3" />
 </>
 )
+
+// Vinduet er en bryter mellom dag og natt, som i det store rommet.
+export const vindu = {
+  boks: [272, 150, 100, 112],
+  tegning: (
+    <>
+      <rect className="rom-himmel" x="282" y="160" width="80" height="92" fill="#a9dfe6" stroke="#33253f" strokeWidth="2.5" />
+      <g className="rom-dag">
+        <circle cx="340" cy="186" r="15" fill="#ffc145" stroke="#33253f" strokeWidth="2.5" />
+      </g>
+      <g className="rom-natt">
+        <path d="M340 172 A14 14 0 1 0 340 200 A17 17 0 0 1 340 172Z" fill="#fff3c4" stroke="#33253f" strokeWidth="2.5" strokeLinejoin="round" />
+        <g className="rom-stjerner" fill="#fff3c4">
+          <path d="M298 172 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3Z" />
+          <circle cx="306" cy="228" r="2" />
+          <circle cx="350" cy="230" r="2" />
+          <circle cx="292" cy="242" r="1.6" />
+        </g>
+      </g>
+      <path d="M322 160 V252 M282 206 H362" stroke="#ffffff" strokeWidth="7" />
+    </>
+  ),
+}
 
 export const ting = {
   'utdanning': {
