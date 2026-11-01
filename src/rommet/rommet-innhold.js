@@ -33,10 +33,13 @@ export const ting = {
       {
         bilde: 'quiz',
         merkelapp: 'Bursdagsprosjekt',
-        tittel: 'Jeopardy-spill',
+        tittel: 'Jeoparty',
         tekst: 'Et quizspill jeg lagde til min egen bursdagsfeiring.',
         teknologi: ['React 19', 'TypeScript', 'Vite', 'Vitest', 'GitHub Actions'],
-        lenke: { tekst: 'Prøv spillet', href: 'https://sarak.dev/Jeoparty/' },
+        lenker: [
+          { tekst: 'Prøv spillet', href: 'https://sarak.dev/Jeoparty/' },
+          { tekst: 'GitHub', href: 'https://github.com/sakh26/Jeoparty' },
+        ],
       },
       {
         bilde: 'laering',

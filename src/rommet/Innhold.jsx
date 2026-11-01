@@ -40,10 +40,14 @@ function Prosjektkort({ p }) {
             </li>
           ))}
         </ul>
-        {p.lenke && (
-          <a className="rom-kort-lenke" href={p.lenke.href}>
-            {p.lenke.tekst} →
-          </a>
+        {p.lenker && (
+          <div className="rom-kort-lenker">
+            {p.lenker.map((l) => (
+              <a key={l.href} className="rom-kort-lenke" href={l.href}>
+                {l.tekst} →
+              </a>
+            ))}
+          </div>
         )}
       </div>
     </article>
