@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Bevegelsesbryter } from '../lek/Bevegelsesbryter'
 import { rekkefolge, ting } from './rommet-innhold'
 import { Innhold } from './Innhold'
 import * as romStor from './tegning/RomStor'
@@ -73,12 +72,6 @@ function Scene({ rom, variant, onApne }) {
             </span>
           </button>
         ))}
-        {variant === 'liten' && (
-          <p className="rom-hint rom-hint-liten">
-            <span className="rom-ping" />
-            Trykk på tingene med merkelapp
-          </p>
-        )}
       </div>
     </div>
   )
@@ -330,22 +323,14 @@ export default function Rommet() {
               Seriøs portefølje
             </a>
           </nav>
-          <div className="rom-topp-del">
-            <button type="button" className="rom-pille rom-vis-liste rom-bare-stor" onClick={visListe}>
-              <Listeikon />
-              Vis alt som liste
-            </button>
-            <Bevegelsesbryter />
-          </div>
+          <button type="button" className="rom-pille rom-vis-liste rom-bare-stor" onClick={visListe}>
+            <Listeikon />
+            Vis alt som liste
+          </button>
         </header>
 
         <Scene rom={romStor} variant="stor" onApne={apne} />
         <Scene rom={romLiten} variant="liten" onApne={apne} />
-
-        <p className="rom-hint rom-hint-stor">
-          <span className="rom-ping" />
-          Klikk på tingene med merkelapp – eller bruk Tab-tasten
-        </p>
 
         <nav className="rom-bunn" aria-label="Snarveier nederst">
           <button type="button" className="rom-vis-liste" onClick={visListe}>

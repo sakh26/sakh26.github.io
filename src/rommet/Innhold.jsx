@@ -40,14 +40,10 @@ function Prosjektkort({ p }) {
             </li>
           ))}
         </ul>
-        {p.lenke.href ? (
+        {p.lenke && (
           <a className="rom-kort-lenke" href={p.lenke.href}>
             {p.lenke.tekst} →
           </a>
-        ) : (
-          <p className="rom-kort-lenke">
-            {p.lenke.tekst}: <span className="rom-plass">[Lenke]</span>
-          </p>
         )}
       </div>
     </article>

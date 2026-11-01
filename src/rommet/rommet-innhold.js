@@ -1,6 +1,6 @@
 // All tekst i rommet og i listevisningen. Endre her, ikke i komponentene.
 // Tekst i [hakeparentes] er plassholdere som må fylles inn.
-// En lenke med href: null vises som plassholdertekst i stedet for en lenke.
+// Et prosjekt uten lenke viser bare ingen lenke.
 
 // Rekkefølgen «Neste ting i rommet» går gjennom.
 export const rekkefolge = ['om-meg', 'utdanning', 'prosjekter', 'sykepleie', 'erfaring', 'ferdigheter', 'kontakt']
@@ -42,9 +42,8 @@ export const ting = {
         bilde: 'laering',
         merkelapp: 'Gruppeprosjekt · OsloMet',
         tittel: 'Læringsplattform',
-        tekst: 'En læringsplattform vi bygde sammen i gruppe på studiet. [Min rolle]',
+        tekst: 'En læringsplattform med quizer og poeng, som vi bygde i en gruppe på fem på studiet.',
         teknologi: ['C#', 'ASP.NET Core', 'React', 'TypeScript', 'SQLite'],
-        lenke: { tekst: 'Se prosjektet', href: null },
       },
       {
         bilde: 'bryllup',
@@ -52,8 +51,7 @@ export const ting = {
         merke: 'Under arbeid',
         tittel: 'Bryllupsnettside',
         tekst: 'En nettside til et bryllup. Den er ikke ferdig ennå – følg med!',
-        teknologi: ['[Teknologi]'],
-        lenke: { tekst: 'Se hvor langt jeg har kommet', href: null },
+        teknologi: ['Python', 'FastAPI', 'React', 'PostgreSQL'],
       },
     ],
   },
@@ -62,7 +60,9 @@ export const ting = {
     merkelapp: 'Sykepleie',
     tittel: 'Sykepleie',
     undertittel: 'Autorisert sykepleier',
-    avsnitt: ['[Kort tekst om hva jeg tar med meg fra sykepleien inn i IT]'],
+    avsnitt: [
+      'Som ansvarsvakt hadde jeg ansvar for et helt vaktlag: jeg prioriterte oppgaver og tok beslutninger under press. Kombinasjonen av teknologi og helse gir meg et tverrfaglig perspektiv.',
+    ],
     punkter: [
       { tittel: 'Sykepleier, Hjemmetjenesten', sted: 'Kristiansand kommune', tid: '2024' },
       { tittel: 'Pleieassistent', sted: 'Kristiansand kommune / Oslo kommune', tid: '2019 – 2024' },
@@ -86,10 +86,19 @@ export const ting = {
         tid: 'juni 2025 – nå',
         tekst: 'Besvarer kundehenvendelser om sykdom og hva helseforsikringen dekker, og formidler videre til klinikker og leverandører i nettverket.',
       },
-      { tittel: 'Miljøarbeider', sted: 'Edvard Munch VGS, Oslo kommune', tid: 'sep. 2024 – 2025', tekst: '[Én linje om hva jeg gjorde]' },
-      { tittel: 'Sykepleier, Hjemmetjenesten', sted: 'Kristiansand kommune', tid: '2024', tekst: '[Én linje om hva jeg gjorde]' },
-      { tittel: 'Pleieassistent', sted: 'Kristiansand kommune / Oslo kommune', tid: '2019 – 2024', tekst: '[Én linje om hva jeg gjorde]' },
-      { tittel: 'Salg- og servicemedarbeider', sted: 'Peppes Pizza, Sørlandssenteret', tid: '2015 – 2020', tekst: '[Én linje om hva jeg gjorde]' },
+      {
+        tittel: 'Miljøarbeider',
+        sted: 'Edvard Munch VGS, Oslo kommune',
+        tid: 'sep. 2024 – 2025',
+        tekst: 'Bidro til et trygt skolemiljø i samarbeid med lærere og rådgivere.',
+      },
+      {
+        tittel: 'Sykepleier og pleieassistent',
+        sted: 'Kristiansand og Oslo',
+        tid: '2019 – 2024',
+        tekst: 'Ansvarsvakt for et helt vaktlag: prioriterte oppgaver og tok beslutninger under press.',
+      },
+      { tittel: 'Salg- og servicemedarbeider', sted: 'Peppes Pizza, Sørlandssenteret', tid: '2015 – 2020', tekst: 'Salg og kundeservice.' },
     ],
   },
 
@@ -112,6 +121,7 @@ export const ting = {
     tittel: 'Kontakt',
     lenker: [
       { navn: 'E-post', tekst: 'sarasabir26@outlook.com', href: 'mailto:sarasabir26@outlook.com' },
+      { navn: 'Telefon', tekst: '+47 901 93 636', href: 'tel:+4790193636' },
       { navn: 'LinkedIn', tekst: 'linkedin.com/in/sara-khudadad-dev', href: 'https://www.linkedin.com/in/sara-khudadad-dev' },
       { navn: 'GitHub', tekst: 'github.com/sakh26', href: 'https://github.com/sakh26' },
     ],

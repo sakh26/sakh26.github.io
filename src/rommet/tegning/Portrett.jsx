@@ -29,8 +29,12 @@ export function Portrett({ x = 0, y = 0, skala = 1 }) {
         <path d="M37 152 C38 122 43 109 51 107 C59 109 64 122 65 152Z" fill={strek} stroke={strek} strokeWidth="2" />
         <path d="M29 102 q-2.5 16 0 32 M73 102 q2.5 16 0 32" fill="none" stroke="#6b443a" strokeWidth="1.8" strokeLinecap="round" />
         <rect x="45.5" y="78" width="11" height="30" rx="5" fill="#d9a07c" />
-        {/* Øret med ringen */}
+        {/* Ørene, med to gulløredobber i hvert: en liten knapp og en ring */}
+        <ellipse cx="33.5" cy="66" rx="3.6" ry="5.6" fill={hud} stroke={strek} strokeWidth="1.6" />
         <ellipse cx="68.5" cy="66" rx="3.6" ry="5.6" fill={hud} stroke={strek} strokeWidth="1.6" />
+        <circle cx="31.4" cy="63" r="1.3" fill="#ffc145" stroke={strek} strokeWidth="0.6" />
+        <circle cx="70.6" cy="63" r="1.3" fill="#ffc145" stroke={strek} strokeWidth="0.6" />
+        <circle cx="33" cy="73" r="2.6" fill="none" stroke="#ffc145" strokeWidth="1.7" />
         <circle cx="69" cy="73" r="2.6" fill="none" stroke="#ffc145" strokeWidth="1.7" />
         {/* Ansiktet */}
         <ellipse cx="51" cy="64" rx="17" ry="21" fill={hud} stroke={strek} strokeWidth="2" />

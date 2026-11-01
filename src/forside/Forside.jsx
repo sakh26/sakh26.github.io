@@ -1,5 +1,3 @@
-import { Bevegelsesbryter } from '../lek/Bevegelsesbryter'
-
 const hjerte =
   'M48 82 C20 62 4 46 4 26 C4 13 14 4 26 4 C36 4 44 10 48 18 C52 10 60 4 70 4 C82 4 92 13 92 26 C92 46 76 62 48 82Z'
 const stjerne = 'M28 3 C31 20 36 25 53 28 C36 31 31 36 28 53 C25 36 20 31 3 28 C20 25 25 20 28 3Z'
@@ -96,7 +94,6 @@ export default function Forside() {
         <p className="fs-navn-h">Khudadad</p>
         <Former />
         <div className="fs-midt">
-          <p className="fs-etikett">Den kreative siden</p>
           <h1 className="fs-tittel">Kom inn i rommet mitt</h1>
           <p className="fs-under">Klikk på tingene i rommet og bli kjent med meg.</p>
           <a className="fs-inn" href="/rommet/">
@@ -106,7 +103,6 @@ export default function Forside() {
             </svg>
           </a>
         </div>
-        <Bevegelsesbryter className="fs-bryter" />
       </section>
 
       <div className="fs-strek" aria-hidden="true" />

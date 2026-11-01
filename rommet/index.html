@@ -26,13 +26,8 @@
     <link rel="canonical" href="https://sarak.dev/rommet/" />
 
     <script>
-      // Bevegelse er på, med mindre maskinen ber om mindre bevegelse eller valget er lagret.
-      var bevegelse = !matchMedia('(prefers-reduced-motion: reduce)').matches
-      try {
-        var lagret = localStorage.getItem('bevegelse')
-        if (lagret) bevegelse = lagret === 'på'
-      } catch (e) {}
-      if (bevegelse) document.documentElement.classList.add('moving')
+      // Bevegelse er på, med mindre maskinen ber om mindre bevegelse.
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('moving')
     </script>
   </head>
   <body class="lek">

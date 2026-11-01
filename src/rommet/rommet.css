@@ -218,37 +218,6 @@
   color: var(--hvit);
 }
 
-.lek .rom-hint {
-  position: absolute;
-  z-index: 5;
-  left: 50%;
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  border-radius: 999px;
-  background: var(--hvit);
-  color: var(--aubergine);
-  font-weight: 500;
-  white-space: nowrap;
-  transform: translateX(-50%);
-}
-
-.lek .rom-hint-stor {
-  bottom: 22px;
-  padding: 10px 18px;
-  font-size: 15px;
-  box-shadow: 0 3px 0 var(--aubergine);
-}
-
-.lek .rom-hint-liten {
-  top: 86.5%;
-  gap: 8px;
-  padding: 6px 14px;
-  font-size: 14px;
-  box-shadow: 0 2px 0 var(--aubergine);
-}
-
 .lek .rom-bunn {
   display: none;
 }
@@ -686,11 +655,6 @@
   color: var(--vinrod);
 }
 
-.lek p.rom-kort-lenke {
-  color: var(--dempet);
-  font-weight: 500;
-}
-
 .lek .rom-gruppe {
   display: flex;
   flex-direction: column;
@@ -809,7 +773,6 @@
 /* ---------- Mobil ---------- */
 @media (max-width: 760px) {
   .lek .rom-scene-stor,
-  .lek .rom-hint-stor,
   .lek .rom-bare-stor {
     display: none;
   }
@@ -835,11 +798,6 @@
 
   .lek .rom-topp .rom-pille {
     padding: 0 14px 0 10px;
-  }
-
-  .lek .rom-topp .lek-bryter {
-    gap: 8px;
-    padding: 0 10px 0 14px;
   }
 
   .lek .rom-lapp {
