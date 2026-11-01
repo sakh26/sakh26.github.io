@@ -21,7 +21,7 @@ export const ting = {
     tittel: 'Utdanning',
     punkter: [
       { tittel: 'Bachelor i Anvendt datateknologi', sted: 'OsloMet', tid: '2024 – 2027 · ferdig sommeren 2027' },
-      { tittel: 'Sykepleierutdanning', sted: 'VID Vitenskapelige Høgskole', tid: '2021 – 2024' },
+      { tittel: 'Bachelor i sykepleie', sted: 'VID Vitenskapelige Høgskole', tid: '2021 – 2024' },
     ],
   },
 
@@ -66,7 +66,7 @@ export const ting = {
     punkter: [
       { tittel: 'Sykepleier, Hjemmetjenesten', sted: 'Kristiansand kommune', tid: '2024' },
       { tittel: 'Pleieassistent', sted: 'Kristiansand kommune / Oslo kommune', tid: '2019 – 2024' },
-      { tittel: 'Sykepleierutdanning', sted: 'VID Vitenskapelige Høgskole', tid: '2021 – 2024' },
+      { tittel: 'Bachelor i sykepleie', sted: 'VID Vitenskapelige Høgskole', tid: '2021 – 2024' },
     ],
   },
 
