@@ -41,6 +41,14 @@
   margin-top: 3px;
   background: var(--accent);
 }
+/* Lenken til den kreative siden skiller seg litt ut fra seksjonene */
+.nav-links a.nav-kreativ {
+  color: var(--accent);
+  white-space: nowrap;
+}
+.nav-links a.nav-kreativ:hover {
+  color: var(--ink);
+}
 .nav-actions {
   display: flex;
   align-items: center;
