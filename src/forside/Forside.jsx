@@ -96,7 +96,7 @@ export default function Forside() {
         <div className="fs-midt">
           <h1 className="fs-tittel">Kom inn i rommet mitt</h1>
           <a className="fs-inn" href="/rommet/">
-            Gå inn i rommet
+            Åpne døra
             <svg className="nudge" width="26" height="20" viewBox="0 0 26 20" aria-hidden="true">
               <path d="M2 10 H22 M14 2 L22 10 L14 18" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
