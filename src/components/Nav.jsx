@@ -39,6 +39,11 @@ export default function Nav() {
               </a>
             </li>
           ))}
+          <li>
+            <a href="/rommet/" className="nav-kreativ">
+              {t.nav.creative} ✦
+            </a>
+          </li>
         </ul>
       </nav>
       <div className="nav-actions">

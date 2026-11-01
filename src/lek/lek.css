@@ -1,0 +1,64 @@
+/* Felles for forsiden og rommet. Alt er avgrenset til body.lek, så ingenting
+   herfra kan treffe den seriøse siden. */
+.lek {
+  --sol: #ffc145;
+  --tomat: #ef6a4c;
+  --teal: #1f8a80;
+  --teal-mork: #187168;
+  --vegg: #ffd9c7;
+  --prikk: #ffc6ae;
+  --gulv: #7c2439;
+  --planke: #6a1d30;
+  --himmel: #a9dfe6;
+  --hvit: #ffffff;
+  --tekst: #33253f;
+  --dempet: #4a3a5a;
+  --vinrod: #7c2439;
+  --vinrod-mork: #5c1a2a;
+  --rosa: #f3e7e4;
+  --lilla: #ece6f2;
+  --aubergine: #33253f;
+  --skjerm: #fffaf8;
+
+  --font-brod: 'Jost', system-ui, sans-serif;
+  --font-lek: 'Bricolage Grotesque', system-ui, sans-serif;
+
+  margin: 0;
+  font-family: var(--font-brod);
+  color: var(--tekst);
+  -webkit-font-smoothing: antialiased;
+}
+
+.lek *,
+.lek *::before,
+.lek *::after {
+  box-sizing: border-box;
+}
+
+.lek a {
+  color: var(--vinrod);
+}
+
+.lek a:hover {
+  color: var(--vinrod-mork);
+}
+
+.lek a:focus-visible,
+.lek button:focus-visible {
+  outline: 3px solid var(--aubergine);
+  outline-offset: 3px;
+}
+
+.lek button {
+  font-family: var(--font-brod);
+  cursor: pointer;
+}
+
+.lek .lek-skjult {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
