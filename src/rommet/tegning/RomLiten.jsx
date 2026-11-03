@@ -7,14 +7,15 @@ export const storrelse = [390, 844]
 export const bakgrunn = (
   <>
     <defs><pattern id="dotsM" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2.5" fill="#ffc6ae" /><circle cx="30" cy="30" r="2.5" fill="#ffc6ae" /></pattern></defs>
-    <rect x="0" y="0" width="390" height="640" fill="#ffd9c7" />
-    <rect x="0" y="0" width="390" height="640" fill="url(#dotsM)" />
-    <rect x="0" y="642" width="390" height="202" fill="#7c2439" />
-    <path d="M0 700 H390 M0 790 H390" stroke="#6a1d30" strokeWidth="3" />
-    <rect x="-4" y="628" width="398" height="14" fill="#f3e7e4" stroke="#33253f" strokeWidth="2.5" />
+    {/* Vegg, list og gulv går langt utenfor scenen, så de fyller hele skjermen */}
+    <rect x="-3000" y="-3000" width="6390" height="3640" fill="#ffd9c7" />
+    <rect x="-3000" y="-3000" width="6390" height="3640" fill="url(#dotsM)" />
+    <rect x="-3000" y="642" width="6390" height="3202" fill="#7c2439" />
+    <path d="M-3000 700 H3390 M-3000 790 H3390 M-3000 880 H3390 M-3000 970 H3390 M-3000 1060 H3390 M-3000 1150 H3390" stroke="#6a1d30" strokeWidth="3" />
+    <rect x="-3004" y="628" width="6398" height="14" fill="#f3e7e4" stroke="#33253f" strokeWidth="2.5" />
     <ellipse cx="195" cy="748" rx="170" ry="34" fill="#ffc145" stroke="#33253f" strokeWidth="2.5" />
     <ellipse cx="195" cy="748" rx="136" ry="20" fill="none" stroke="#33253f" strokeWidth="2.5" strokeDasharray="10 9" />
-    <path d="M0 80 Q195 124 390 80" fill="none" stroke="#33253f" strokeWidth="2.5" />
+    <path d="M-400 -10 L0 80 Q195 124 390 80 L790 -10" fill="none" stroke="#33253f" strokeWidth="2.5" strokeLinejoin="round" />
     <g stroke="#33253f" strokeWidth="2.5" strokeLinejoin="round">
     <path d="M16 86 L44 86 L30 116Z" fill="#7c2439" />
     <path d="M71 95 L99 95 L85 125Z" fill="#ffc145" />

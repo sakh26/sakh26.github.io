@@ -9,11 +9,12 @@ export const bakgrunn = (
     <defs>
     <pattern id="dotsA" width="48" height="48" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="3" fill="#ffc6ae" /><circle cx="36" cy="36" r="3" fill="#ffc6ae" /></pattern>
     </defs>
-    <rect x="0" y="0" width="1440" height="700" fill="#ffd9c7" />
-    <rect x="0" y="0" width="1440" height="700" fill="url(#dotsA)" />
-    <rect x="0" y="704" width="1440" height="196" fill="#7c2439" />
-    <path d="M0 768 H1440 M0 842 H1440" stroke="#6a1d30" strokeWidth="3" />
-    <rect x="-4" y="688" width="1448" height="16" fill="#f3e7e4" stroke="#33253f" strokeWidth="3" />
+    {/* Vegg, list og gulv går langt utenfor scenen, så de fyller hele skjermen */}
+    <rect x="-3000" y="-3000" width="7440" height="3700" fill="#ffd9c7" />
+    <rect x="-3000" y="-3000" width="7440" height="3700" fill="url(#dotsA)" />
+    <rect x="-3000" y="704" width="7440" height="3196" fill="#7c2439" />
+    <path d="M-3000 768 H4440 M-3000 842 H4440 M-3000 916 H4440 M-3000 990 H4440 M-3000 1064 H4440 M-3000 1138 H4440 M-3000 1212 H4440 M-3000 1286 H4440 M-3000 1360 H4440 M-3000 1434 H4440" stroke="#6a1d30" strokeWidth="3" />
+    <rect x="-3004" y="688" width="7448" height="16" fill="#f3e7e4" stroke="#33253f" strokeWidth="3" />
     <ellipse cx="820" cy="805" rx="400" ry="62" fill="#ffc145" stroke="#33253f" strokeWidth="3" />
     <ellipse cx="820" cy="805" rx="330" ry="40" fill="none" stroke="#33253f" strokeWidth="3" strokeDasharray="14 12" />
     <g className="flags fbt">

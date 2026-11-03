@@ -41,6 +41,15 @@
   }
 }
 
+/* Høye skjermer, som nettbrett på høykant: scenen står litt lavere, så det
+   blir mer vegg over og mindre gulv under. */
+@media (max-aspect-ratio: 5 / 4) {
+  .lek .rom-scene-stor {
+    align-items: flex-end;
+    padding-bottom: max(0px, calc((100svh - 62.5vw) * 0.3));
+  }
+}
+
 .lek .rom-scene-liten {
   display: none;
 }
@@ -51,6 +60,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  overflow: visible;
   pointer-events: none;
 }
 
@@ -846,7 +856,8 @@
 }
 
 /* ---------- Mobil ---------- */
-@media (max-width: 760px) {
+/* Mobil, og nettbrett på høykant: det høye rommet passer best */
+@media (max-width: 760px), (max-aspect-ratio: 4 / 5) {
   .lek .rom-scene-stor,
   .lek .rom-bare-stor {
     display: none;
